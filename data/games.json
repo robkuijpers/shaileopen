@@ -1,0 +1,158 @@
+{ 
+    "games": [
+        {
+            "date": "2016-08-08T22:13:30.000Z",
+            "category": "HE8",
+            "type": "double",
+            "status": "finished",
+            "court": "4",
+            "duration": "2:50",
+            "teams": [
+                {
+                    "team1": [
+                        {
+                            "player1": {
+                                "knltbNumber": "123456"
+                            },
+                            "player2": {
+                                "knltbNumber": "123456"
+                            }
+                        }
+                    ],
+                    "team2": [
+                        {
+                            "player1": {
+                                "knltbNumber": "123456"
+                            },
+                            "player2": {
+                                "knltbNumber": "123456"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "sets": [
+                {
+                    "set1": [
+                        {
+                            "team1": "4"
+                        },
+                        {
+                            "team2": "6"
+                        }
+                    ]
+                },
+                {
+                    "set2": [
+                        {
+                            "team1": "6"
+                        },
+                        {
+                            "team2": "4"
+                        }
+                    ]
+                },
+                {
+                    "set3": [
+                        {
+                            "team1": "5"
+                        },
+                        {
+                            "team2": "7"
+                        }
+                    ]
+                }
+            ],
+            "result": "team1-winner"
+        },
+        {
+            "date": "2016-08-08T22:16:30.000Z",
+            "category": "HE8",
+            "type": "single",
+            "status": "current",
+            "court": "3",
+            "duration": "",
+            "teams": [
+                {
+                    "team1": [
+                        {
+                            "player1": {
+                                "knltbNumber": "123456"
+                            },
+                            "player2": {
+                                "knltbNumber": "123456"
+                            }
+                        }
+                    ],
+                    "team2": [
+                        {
+                            "player1": {
+                                "knltbNumber": "123456"
+                            },
+                            "player2": {
+                                "knltbNumber": "123456"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "sets": [
+                {
+                    "set1": [
+                        {
+                            "team1": "4"
+                        },
+                        {
+                            "team2": "6"
+                        }
+                    ]
+                },
+                {
+                    "set2": [
+                        {
+                            "team1": "1"
+                        },
+                        {
+                            "team2": "1"
+                        }
+                    ]
+                }
+            ],
+            "result": ""
+        },
+        {
+            "date": "2016-08-09T22:10:30.000Z",
+            "category": "HE7",
+            "type": "single",
+            "court": "2",
+            "status": "planned",
+            "duration": "",
+            "teams": [
+                {
+                    "team1": [
+                        {
+                            "player1": {
+                                "knltbNumber": "123456"
+                            },
+                            "player2": {
+                                "knltbNumber": "123456"
+                            }
+                        }
+                    ],
+                    "team2": [
+                        {
+                            "player1": {
+                                "knltbNumber": "123456"
+                            },
+                            "player2": {
+                                "knltbNumber": "123456"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "sets": [],
+            "result": ""
+        }
+    ]
+}    
