@@ -2,26 +2,34 @@
     <button menuToggle>
         <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Shaile Open
-        <img src="../build/images/logo-small.png" /></ion-title>
+    <ion-title>Shaile Open</ion-title>  
+    <ion-buttons end>
+       <div class="logo">
+          <img src="../build/images/logo-small.png" />
+       </div>
+    </ion-buttons>     
 </ion-navbar>
              
 <ion-content class="home">
   
   <ion-row>
       <ion-col class="width-50">
-          <ion-card>
+          <ion-card (click)="openPage(gamesPage)">
               <ion-card-content>
-                  <div class="icon-address-book"></div>
-                  <div>Wedstrijden</div>
+                  <div class="tile-item"> 
+                    <div class="icon-address-book tile-icon"></div>
+                    <div class="tile-title">Wedstrijden</div>
+                  </div>
               </ion-card-content>
           </ion-card>
       </ion-col>
       <ion-col class="width-50">
-          <ion-card>
+          <ion-card (click)="openPage(categorieenPage)">
               <ion-card-content>
-                 <div class="icon-tree"></div>
-                  <div>Categorieën</div>
+                 <div class="tile-item"> 
+                    <div class="icon-tree tile-icon"></div>
+                    <div class="tile-title">Categorieën</div>
+                 </div>   
               </ion-card-content>
           </ion-card>
       </ion-col>
@@ -29,21 +37,33 @@
   
   <ion-row>
       <ion-col class="width-50">
-          <ion-card>
+          <ion-card (click)="openPage(playersPage)">
               <ion-card-content>
-                 <div class="icon-users"></div>
-                 <div>Spelers</div>
+                 <div class="tile-item"> 
+                    <div class="icon-users tile-icon"></div>
+                    <div class="tile-title">Spelers</div>
+                 </div>   
               </ion-card-content>
           </ion-card>                  
       </ion-col>
       <ion-col class="width-50">
-          <ion-card>
+          <ion-card (click)="openPage(eventsPage)">
               <ion-card-content>
-                 <div class="icon-glass2"></div>
-                  <div>Programma</div>
+                 <div class="tile-item"> 
+                    <div class="icon-glass2 tile-icon"></div>
+                    <div class="tile-title">Programma</div>
+                 </div>    
               </ion-card-content>
           </ion-card>                  
       </ion-col>
   </ion-row>
 
+  <ion-row>
+      <ion-col>
+          <div class="sponsor-slider">
+             <div>Sponsor silder</div>
+          </div>
+      </ion-col>
+  </ion-row>
+      
 </ion-content>

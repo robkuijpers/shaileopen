@@ -1,0 +1,30 @@
+$purple: #A40233;
+
+.toolbar {
+    
+  .logo {
+      img {        
+          width: 30px;
+      }
+      
+  }
+  
+  .button-inner {
+      color: white;
+  }
+  
+  .toolbar-title {
+      color: white;
+  }
+  
+  .toolbar-background {
+     background: linear-gradient(top, rgba(163,1,51,1) 0%,rgba(117,1,36,1) 100%);
+  }
+   
+} 
+
+.menu-icon {
+    color: $purple;
+    padding-right: 12px;
+}
+    

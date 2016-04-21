@@ -17,22 +17,22 @@ import {AboutPage} from './pages/about/about';
                <ion-content>
                  <ion-list>
                    <button ion-item (click)="openPage(homePage)">
-                     <span class="icon-users"></span>Home
+                     <span class="icon-menu menu-icon"></span>Home
                    </button>
                    <button ion-item (click)="openPage(gamesPage)">
-                     <span class="icon-address-book"></span>Wedstrijden
+                     <span class="icon-address-book menu-icon"></span>Wedstrijden
                    </button>
                    <button ion-item (click)="openPage(playersPage)">
-                     <span class="icon-users"></span>Spelers
+                     <span class="icon-users menu-icon"></span>Spelers
                    </button>
                    <button ion-item (click)="openPage(categoriesPage)">
-                     <span class="icon-users"></span>Categorieen
+                     <span class="icon-tree menu-icon"></span>Categorieen
                    </button>
                    <button ion-item (click)="openPage(eventsPage)">
-                     <span class="icon-glass2"></span>Programma
+                     <span class="icon-glass2 menu-icon"></span>Programma
                    </button>
                   <button ion-item (click)="openPage(aboutPage)">
-                    <span class="icon-users"></span>Over deze app
+                    <span class="icon-notification menu-icon"></span>Over deze app
                   </button>                       
                  </ion-list>
                </ion-content>
