@@ -7,7 +7,7 @@ import {CategoriesPage} from './pages/categories/categories';
 import {EventsPage} from './pages/events/events';
 import {GamesPage} from './pages/games/games';
 import {PlayersPage} from './pages/players/players';
-
+import {AboutPage} from './pages/about/about';
 
 @App({
   template: `<ion-menu [content]="content">
@@ -17,20 +17,23 @@ import {PlayersPage} from './pages/players/players';
                <ion-content>
                  <ion-list>
                    <button ion-item (click)="openPage(homePage)">
-                     Home
+                     <span class="icon-users"></span>Home
                    </button>
                    <button ion-item (click)="openPage(gamesPage)">
-                     Wedstrijden
+                     <span class="icon-address-book"></span>Wedstrijden
                    </button>
                    <button ion-item (click)="openPage(playersPage)">
-                     Spelers
+                     <span class="icon-users"></span>Spelers
                    </button>
                    <button ion-item (click)="openPage(categoriesPage)">
-                     Categorieen
+                     <span class="icon-users"></span>Categorieen
                    </button>
                    <button ion-item (click)="openPage(eventsPage)">
-                     Programma
+                     <span class="icon-glass2"></span>Programma
                    </button>
+                  <button ion-item (click)="openPage(aboutPage)">
+                    <span class="icon-users"></span>Over deze app
+                  </button>                       
                  </ion-list>
                </ion-content>
              </ion-menu>
@@ -46,6 +49,7 @@ export class MyApp {
   eventsPage: any = EventsPage;
   playersPage: any = PlayersPage;
   categoriesPage: any = CategoriesPage;
+  aboutPage: any = AboutPage;
 
   menu: MenuController;
   app: IonicApp
@@ -60,7 +64,8 @@ export class MyApp {
     this.eventsPage = EventsPage;
     this.categoriesPage = CategoriesPage;
     this.playersPage = PlayersPage;
-      
+    this.aboutPage = AboutPage;
+  
     this.rootPage = this.homePage;
           
     platform.ready().then(() => {
