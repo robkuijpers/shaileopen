@@ -75,7 +75,7 @@ export class MyApp {
     });
   }
   
-    openPage(page) {
+  openPage(page) {
     // Reset the nav controller to have just this page
     // we wouldn't want the back button to show in this scenario
     this.rootPage = page;

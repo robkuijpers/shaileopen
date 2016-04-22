@@ -1,4 +1,4 @@
-import {Page} from 'ionic-angular';
+import {Page, NavController} from 'ionic-angular';
 import {CategoriesPage} from '../categories/categories';
 import {EventsPage} from '../events/events';
 import {GamesPage} from '../games/games';
@@ -15,14 +15,12 @@ export class HomePage {
   categoriesPage = CategoriesPage;
   playersPage = PlayersPage;
     
-  constructor() {
+  constructor(private nav: NavController) {
 
   }
   
   openPage(page) {
-    // Reset the nav controller to have just this page
-    // we wouldn't want the back button to show in this scenario
-    //this.rootPage = page;
+    this.nav.setRoot(page, {});
   }
     
 }
