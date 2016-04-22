@@ -76,6 +76,8 @@ Whitespace around logo image.
 Styling and logo in toolbar.
 Add icons in menu.
 Style tiles on home page.
+Add slider with sponsor images (hide pagination bulltes with css).
+Added naviagation when clicking tiles on home page.
 
 Run the app on an iPhone:
 - sudo npm install -g --unsafe-perm ios-deploy
@@ -87,8 +89,6 @@ Run the app on and Andriod device.
 Step 4
 ======
 Set App icon.
-Add slider with sponsor images.
-Open pages when clicking tiles on home page.
 Check database connection and give error message if unavailable.
 Add services to retrieve data:
 - dates
