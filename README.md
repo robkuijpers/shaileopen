@@ -89,7 +89,9 @@ Run the app on and Andriod device.
 
 Step 4
 ======
-Set App icon.
+Better App icon, better splash.
+Fix Shaile logo not showing on ios in nav bar.
+Fix navigation.
 Check database connection and give error message if unavailable.
 Add services to retrieve data:
 - dates
@@ -98,7 +100,5 @@ Add services to retrieve data:
 - games
 - events
 
-Todo: better shaile logo image in correct color.
-Todo: Fix Shaile logo not showing on ios in nav bar.
  
 
