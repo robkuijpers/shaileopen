@@ -1,6 +1,6 @@
 import 'es6-shim';
 import {App, Platform} from 'ionic-angular';
-import {MenuController, IonicApp} from 'ionic-angular';
+import {MenuController, NavController, IonicApp} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
 import {CategoriesPage} from './pages/categories/categories';
@@ -58,7 +58,6 @@ export class MyApp {
       
     this.app = app;
     this.menu = menu;
-    
     this.homePage = HomePage;
     this.gamesPage = GamesPage;
     this.eventsPage = EventsPage;

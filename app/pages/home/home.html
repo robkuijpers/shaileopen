@@ -16,7 +16,7 @@
       <ion-col class="width-50">
           <ion-card (click)="openPage(gamesPage)">
               <ion-card-content>
-                  <div class="tile-item"> 
+                  <div class="tile"> 
                     <div class="icon-address-book tile-icon"></div>
                     <div class="tile-title">Wedstrijden</div>
                   </div>
@@ -26,7 +26,7 @@
       <ion-col class="width-50">
           <ion-card (click)="openPage(categoriesPage)">
               <ion-card-content>
-                 <div class="tile-item"> 
+                 <div class="tile"> 
                     <div class="icon-tree tile-icon"></div>
                     <div class="tile-title">Categorieën</div>
                  </div>   
@@ -39,7 +39,7 @@
       <ion-col class="width-50">
           <ion-card (click)="openPage(playersPage)">
               <ion-card-content>
-                 <div class="tile-item"> 
+                 <div class="tile"> 
                     <div class="icon-users tile-icon"></div>
                     <div class="tile-title">Spelers</div>
                  </div>   
@@ -49,7 +49,7 @@
       <ion-col class="width-50">
           <ion-card (click)="openPage(eventsPage)">
               <ion-card-content>
-                 <div class="tile-item"> 
+                 <div class="tile"> 
                     <div class="icon-glass2 tile-icon"></div>
                     <div class="tile-title">Programma</div>
                  </div>    
@@ -62,6 +62,9 @@
 
 <ion-row class="sponsor-slider">
     <ion-slides pager [options]="slideOptions" >
+        <ion-slide>
+            <img src="build/images/shaile.png" class="sponsor-image"/>
+        </ion-slide>
         <ion-slide>
             <img src="build/images/jumbo.png" class="sponsor-image"/>
         </ion-slide>

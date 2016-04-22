@@ -1,8 +1,9 @@
 .home {
   
-  .tile-item {
+  .tile {
       display: flex;
       flex-direction: column;
+      cursor: pointer;
   }
 
   .tile-icon {
@@ -14,7 +15,6 @@
   .tile-title {
       text-align: center;
       padding-top: 8px;
-      cursor: pointer;
   }
   
 }

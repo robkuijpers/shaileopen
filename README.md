@@ -78,6 +78,7 @@ Add icons in menu.
 Style tiles on home page.
 Add slider with sponsor images (hide pagination bulltes with css).
 Added naviagation when clicking tiles on home page.
+Changes splashscreen settings
 
 Run the app on an iPhone:
 - sudo npm install -g --unsafe-perm ios-deploy
@@ -96,4 +97,8 @@ Add services to retrieve data:
 - players
 - games
 - events
+
+Todo: better shaile logo image in correct color.
+Todo: Fix Shaile logo not showing on ios in nav bar.
+ 
 

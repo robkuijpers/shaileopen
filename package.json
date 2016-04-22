@@ -1,4 +1,8 @@
-{
+{  
+  "version": "0.1.0",
+  "name": "shaileopen",
+  "description": "Shaile Open: An Ionic project",
+  
   "dependencies": {
     "angular2": "2.0.0-beta.8",
     "es6-promise": "3.0.2",
@@ -36,7 +40,5 @@
       "version": "",
       "locator": "ios"
     }
-  ],
-  "name": "shaileopen",
-  "description": "shaileopen: An Ionic project"
+  ]
 }
