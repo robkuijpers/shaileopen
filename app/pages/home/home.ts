@@ -14,9 +14,16 @@ export class HomePage {
   eventsPage = EventsPage;
   categoriesPage = CategoriesPage;
   playersPage = PlayersPage;
-    
+  
+  slideOptions = {
+      pager: false,
+      autoplay: 4000,
+      speed: 1500,
+      loop: true
+  }
+              
   constructor(private nav: NavController) {
-
+        
   }
   
   openPage(page) {

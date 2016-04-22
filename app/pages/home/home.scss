@@ -17,9 +17,16 @@
       cursor: pointer;
   }
   
-  .sponsor-slider {
-      display: flex;
-      flex-direction: column;
-  }
-  
+}
+
+.sponsor-slider {
+    background-color:white;
+}
+
+.sponsor-image {
+    
+}
+
+.swiper-slide img {
+    max-height: 100px;  
 }

@@ -57,13 +57,20 @@
           </ion-card>                  
       </ion-col>
   </ion-row>
-
-  <ion-row>
-      <ion-col>
-          <div class="sponsor-slider">
-             <div>Sponsor silder</div>
-          </div>
-      </ion-col>
-  </ion-row>
       
 </ion-content>
+
+<ion-row class="sponsor-slider">
+    <ion-slides pager [options]="slideOptions" >
+        <ion-slide>
+            <img src="build/images/jumbo.png" class="sponsor-image"/>
+        </ion-slide>
+        <ion-slide>
+            <img src="build/images/sport2000.jpg" class="sponsor-image"/>
+        </ion-slide>
+    </ion-slides>
+</ion-row>
+  
+<ion-toolbar position="bottom">
+    <ion-title></ion-title>
+</ion-toolbar>
