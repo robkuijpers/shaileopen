@@ -6,6 +6,16 @@
 </ion-navbar>
              
 <ion-content class="games">
+  
+  <ion-list>
+    <ion-item>
+      <ion-label>Datum</ion-label>
+      <ion-select  [(ngModel)]="selectedDate" (change)="dateSelected($event)">
+        <ion-option *ngFor="#dt of dates" value="{{ dt }}">{{ dt }}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  
   <ion-card>
     <ion-card-content>
       Wedstrijden

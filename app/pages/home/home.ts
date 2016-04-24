@@ -9,7 +9,15 @@ import {PlayersPage} from '../players/players';
 })
 
 export class HomePage {
-  
+
+  static get parameters() {
+    return [
+      [NavController]
+    ]
+  }
+    
+  nav: NavController;
+    
   gamesPage = GamesPage;
   eventsPage = EventsPage;
   categoriesPage = CategoriesPage;
@@ -22,12 +30,12 @@ export class HomePage {
       loop: true
   }
               
-  constructor(private nav: NavController) {
-        
+  constructor(nav: NavController) {
+      this.nav = nav;
   }
   
   openPage(page) {
-    this.nav.setRoot(page, {});
+    this.nav.setRoot(page);
   }
     
 }

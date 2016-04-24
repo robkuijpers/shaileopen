@@ -1,3 +1,16 @@
 .games {
   
+    ion-select {
+        padding: 13px 8px 13px 0;
+        max-width: 65%;
+        
+        .select-text {
+            font-weight: bold;
+        }
+    }
+
+    .select-text {
+        text-align: right;
+    }
+    
 }

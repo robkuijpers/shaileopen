@@ -1,6 +1,6 @@
 import 'es6-shim';
-import {App, Platform} from 'ionic-angular';
-import {MenuController, NavController, IonicApp} from 'ionic-angular';
+import {App, Platform, Page} from 'ionic-angular';
+import {MenuController, IonicApp} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
 import {CategoriesPage} from './pages/categories/categories';
@@ -8,6 +8,7 @@ import {EventsPage} from './pages/events/events';
 import {GamesPage} from './pages/games/games';
 import {PlayersPage} from './pages/players/players';
 import {AboutPage} from './pages/about/about';
+import {HTTP_PROVIDERS} from 'angular2/http';
 
 @App({
   template: `<ion-menu [content]="content">
@@ -16,24 +17,9 @@ import {AboutPage} from './pages/about/about';
                </ion-toolbar>
                <ion-content>
                  <ion-list>
-                   <button ion-item (click)="openPage(homePage)">
-                     <span class="icon-menu menu-icon"></span>Home
-                   </button>
-                   <button ion-item (click)="openPage(gamesPage)">
-                     <span class="icon-address-book menu-icon"></span>Wedstrijden
-                   </button>
-                   <button ion-item (click)="openPage(playersPage)">
-                     <span class="icon-users menu-icon"></span>Spelers
-                   </button>
-                   <button ion-item (click)="openPage(categoriesPage)">
-                     <span class="icon-tree menu-icon"></span>Categorieen
-                   </button>
-                   <button ion-item (click)="openPage(eventsPage)">
-                     <span class="icon-glass2 menu-icon"></span>Programma
-                   </button>
-                  <button ion-item (click)="openPage(aboutPage)">
-                    <span class="icon-notification menu-icon"></span>Over deze app
-                  </button>                       
+                    <button ion-item menuClose *ngFor="#pg of menuPages" (click)="openPage( pg.component )">
+                      <span class="{{pg.class}}"></span>{{ pg.title }}
+                    </button>
                  </ion-list>
                </ion-content>
              </ion-menu>
@@ -43,29 +29,32 @@ import {AboutPage} from './pages/about/about';
 
 export class MyApp {
   
-  rootPage: any = HomePage;
-  homePage: any = HomePage;
-  gamesPage: any = GamesPage;
-  eventsPage: any = EventsPage;
-  playersPage: any = PlayersPage;
-  categoriesPage: any = CategoriesPage;
-  aboutPage: any = AboutPage;
-
+  static get parameters() {
+    return [
+      [Platform], [IonicApp], [MenuController]
+    ]
+  }
+  
+  rootPage: any;
   menu: MenuController;
-  app: IonicApp
+  app: IonicApp;
+  menuPages: any[];
   
   constructor(platform: Platform, app: IonicApp, menu: MenuController) {
       
     this.app = app;
     this.menu = menu;
-    this.homePage = HomePage;
-    this.gamesPage = GamesPage;
-    this.eventsPage = EventsPage;
-    this.categoriesPage = CategoriesPage;
-    this.playersPage = PlayersPage;
-    this.aboutPage = AboutPage;
-  
-    this.rootPage = this.homePage;
+    
+    this.rootPage = HomePage;
+         
+    this.menuPages = [
+      { component: HomePage, class: 'icon-menu menu-icon', title: 'Home'},
+      { component: GamesPage, class: 'icon-address-book menu-icon', title: 'Wedstrijden'},
+      { component: PlayersPage, class: 'icon-users menu-icon', title: 'Spelers'},
+      { component: CategoriesPage, class: 'icon-tree menu-icon', title: 'Categorieen'},
+      { component: EventsPage, class: 'icon-glass2 menu-icon', title: 'Programma'},
+      { component: AboutPage, class: 'icon-notification menu-icon', title: 'Over deze app'}
+    ];
           
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -78,6 +67,7 @@ export class MyApp {
     // Reset the nav controller to have just this page
     // we wouldn't want the back button to show in this scenario
     this.rootPage = page;
+    // if page ==== HomePage -> homePage.nav = 
   
     // close the menu when clicking a link from the menu
     this.menu.close();

@@ -5,7 +5,7 @@ import {Page} from 'ionic-angular';
 })
 
 export class PlayersPage {
-  
+
   constructor() {
 
   }
