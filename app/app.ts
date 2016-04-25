@@ -11,7 +11,7 @@ import {AboutPage} from './pages/about/about';
 import {HTTP_PROVIDERS} from 'angular2/http';
 
 @App({
-  template: `<ion-menu [content]="content">
+  template: `<ion-menu id="leftMenu" [content]="content">
                <ion-toolbar>
                  <ion-title>Menu</ion-title>
                </ion-toolbar>
@@ -23,11 +23,11 @@ import {HTTP_PROVIDERS} from 'angular2/http';
                  </ion-list>
                </ion-content>
              </ion-menu>
-             <ion-nav [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>`,
+             <ion-nav id="nav" [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>`,
   config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
 
-export class MyApp {
+class MyApp {
   
   static get parameters() {
     return [
@@ -64,13 +64,13 @@ export class MyApp {
   }
   
   openPage(page) {
-    // Reset the nav controller to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.rootPage = page;
-    // if page ==== HomePage -> homePage.nav = 
+    
+    // navigate to the new page if it is not the current page
+    let nav = this.app.getComponent('nav');
+    nav.setRoot(page);
   
-    // close the menu when clicking a link from the menu
-    this.menu.close();
+    // // close the menu when clicking a link from the menu
+    this.menu.close();  // or: this.app.getComponent('leftMenu').close();
   }
   
 }

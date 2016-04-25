@@ -17,7 +17,7 @@ export class HomePage {
   }
     
   nav: NavController;
-    
+  
   gamesPage = GamesPage;
   eventsPage = EventsPage;
   categoriesPage = CategoriesPage;
@@ -35,7 +35,7 @@ export class HomePage {
   }
   
   openPage(page) {
-    this.nav.setRoot(page);
+    this.nav.push(page);
   }
     
 }
