@@ -7,63 +7,15 @@
             "status": "finished",
             "court": "4",
             "duration": "2:50",
-            "teams": [
-                {
-                    "team1": [
-                        {
-                            "player1": {
-                                "knltbNumber": "123456"
-                            },
-                            "player2": {
-                                "knltbNumber": "123456"
-                            }
-                        }
-                    ],
-                    "team2": [
-                        {
-                            "player1": {
-                                "knltbNumber": "123456"
-                            },
-                            "player2": {
-                                "knltbNumber": "123456"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "sets": [
-                {
-                    "set1": [
-                        {
-                            "team1": "4"
-                        },
-                        {
-                            "team2": "6"
-                        }
-                    ]
-                },
-                {
-                    "set2": [
-                        {
-                            "team1": "6"
-                        },
-                        {
-                            "team2": "4"
-                        }
-                    ]
-                },
-                {
-                    "set3": [
-                        {
-                            "team1": "5"
-                        },
-                        {
-                            "team2": "7"
-                        }
-                    ]
-                }
-            ],
-            "result": "team1-winner"
+            "team1": {
+                "players": [ { "knltbNumber": "123456" }, { "knltbNumber": "654321" } ],
+                "sets": [ 6, 4, 0 ]
+            },
+            "team2": {
+                "players": [ { "knltbNumber": "332244" }, { "knltbNumber": "441234" } ],
+                "sets": [ 3, 6, 6 ]
+            },
+            "result": "team2"
         },
         {
             "date": "2016-08-08T22:16:30.000Z",
@@ -72,52 +24,14 @@
             "status": "current",
             "court": "3",
             "duration": "",
-            "teams": [
-                {
-                    "team1": [
-                        {
-                            "player1": {
-                                "knltbNumber": "123456"
-                            },
-                            "player2": {
-                                "knltbNumber": "123456"
-                            }
-                        }
-                    ],
-                    "team2": [
-                        {
-                            "player1": {
-                                "knltbNumber": "123456"
-                            },
-                            "player2": {
-                                "knltbNumber": "123456"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "sets": [
-                {
-                    "set1": [
-                        {
-                            "team1": "4"
-                        },
-                        {
-                            "team2": "6"
-                        }
-                    ]
-                },
-                {
-                    "set2": [
-                        {
-                            "team1": "1"
-                        },
-                        {
-                            "team2": "1"
-                        }
-                    ]
-                }
-            ],
+            "team1": {
+                "players": [ { "knltbNumber": "123456" }, { "knltbNumber": "654321" } ],
+                "sets": [ 6, 3 ]
+            },
+            "team2": {
+                "players": [ { "knltbNumber": "332244" }, { "knltbNumber": "441234" } ],
+                "sets": [ 3, 3 ]
+            },
             "result": ""
         },
         {
@@ -127,31 +41,14 @@
             "court": "2",
             "status": "planned",
             "duration": "",
-            "teams": [
-                {
-                    "team1": [
-                        {
-                            "player1": {
-                                "knltbNumber": "123456"
-                            },
-                            "player2": {
-                                "knltbNumber": "123456"
-                            }
-                        }
-                    ],
-                    "team2": [
-                        {
-                            "player1": {
-                                "knltbNumber": "123456"
-                            },
-                            "player2": {
-                                "knltbNumber": "123456"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "sets": [],
+            "team1": {
+                "players": [ { "knltbNumber": "123456" } ],
+                "sets": []
+            },
+            "team2": {
+                "players": [ { "knltbNumber": "332244" } ],
+                "sets": []
+            },
             "result": ""
         }
     ]

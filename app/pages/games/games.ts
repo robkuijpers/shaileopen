@@ -1,10 +1,17 @@
 import {OnInit} from 'angular2/core';  
 import {IonicApp, Page, NavController} from 'ionic-angular';
 import {GamesService} from '../../services/gamesService';
+import {Game} from '../../services/game';
+import {FormatDatePipe} from './formatDatePipe';
+import {FinishedGame} from './finishedGame';
+import {CurrentGame} from './currentGame';
+import {PlannedGame} from './plannedGame';
 
 @Page({
   templateUrl: 'build/pages/games/games.html',
-  providers: [GamesService]
+  directives: [FinishedGame, CurrentGame, PlannedGame],
+  providers: [GamesService],
+  pipes: [FormatDatePipe]
 })
 
 export class GamesPage {
@@ -13,7 +20,11 @@ export class GamesPage {
   app: IonicApp;
   dates: Array<Date> = [];
   selectedDate: Date = new Date();
-        
+     
+  finishedGames: Array<Game> = [];
+  currentGames: Array<Game> = [];
+  plannedGames: Array<Game> = [];
+            
   constructor(private gamesService: GamesService) {
       this.gamesService = gamesService;
   }
@@ -28,21 +39,21 @@ export class GamesPage {
   }
     
   dateSelected(evt) {
-    // this.gamesService.getGamesByDateForDate(this.selectedDate).subscribe(
-    //     (games: Array<Game>) => {
-    //         games.forEach( (game: Game) => {
-    //             if(game.isFinished()) {
-    //                 this.finishedGames.push(game);
-    //             } else if(game.isCurrent()) {
-    //                 this.currentGames.push(game);
-    //             } else if(game.isPlanned()) {
-    //                 this.plannedGames.push(game);
-    //             } else {
-    //                 console.log('game with unknown status retrieved.');
-    //             }
-    //         });
-    //     },
-    //     (err) => console.log(err));
+    this.gamesService.getGamesForDate(this.selectedDate).subscribe(
+        (games: Array<Game>) => {
+            games.forEach( (game: Game) => {
+                if(game.isFinished()) {
+                    this.finishedGames.push(game);
+                } else if(game.isCurrent()) {
+                    this.currentGames.push(game);
+                } else if(game.isPlanned()) {
+                    this.plannedGames.push(game);
+                } else {
+                    console.log('game with unknown status retrieved.');
+                }
+            });
+        },
+        (err) => console.log(err));
   }
   
   // The the dropdown contains the current date then select it,

@@ -89,16 +89,49 @@ Run the app on and Andriod device.
 
 Step 4
 ======
-Better App icon, better splash.
-Fix Shaile logo not showing on ios in nav bar.
-Fix navigation.
-Check database connection and give error message if unavailable.
+Changed data structure a bit.
+Create a formatDate Pipe becaue Angular2 date format pipe did not work.
+Fixed navigation but still not how I want it!!!
+Fixed logo in header.
 Add services to retrieve data:
+- dates (ordered by date)
+- games (ordered by date, category)
+- categories (ordered by category)
+- players (ordered by last name)
+- events (ordered by date)
+
+TODO: Better App icon, better splash.
+TODO: Check database connection and give error message if unavailable.
+
+Step 5
+======
+Show data (create directives) for games, categories, players, events.
+Detail page for player with knltb rating.
+Detail page for categories with schema's.
+Splash spinner configuration.
+Spinner during service invocation.
+
+Step 6
+======
+Error handling
+Toasts
+Messages
+Dialogs
+
+Step 7
+======
+Add favorites to persons and store on phone.
+Favorite persons page (remove favorite).
+Show all games of favorite persons.
+Add cup icon for winners.
+
+Step 8
+======
+Webapp with login.
+Webapp with for CRUD:
 - dates
 - categories
-- players
-- games
 - events
-
- 
-
+- players
+- teams
+- games
