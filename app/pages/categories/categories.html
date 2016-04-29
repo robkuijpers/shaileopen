@@ -8,7 +8,15 @@
 <ion-content class="categories">
   <ion-card>
     <ion-card-content>
-      Categorieen
+      <ion-list>
+        <ion-list-item class="category" *ngFor="#category of categories">
+          <div>
+            {{ category.name }}
+            <br>
+            <br>
+          </div>
+        </ion-list-item>
+      </ion-list>
     </ion-card-content>
   </ion-card>
 </ion-content>

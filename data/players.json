@@ -1,41 +1,40 @@
-{ "players":[ 
-    {
-        "knltbNumber":"12345611",
-        "initials":"R.J.M.",
-        "firstName": "Rob",
-        "prefix":"",
-        "surName":"Kuijpers",
-        "dateOfBirth": "1965-08-16T22:13:30.000Z",
-        "gender":"M",
-        "ranking":"7",
-        "rankingActual":"6,8",
-        "email":"robkuijpers@home.nl",
-        "phone":"0612345678"
-    },
-    {
-        "knltbNumber":"12345622",        
-        "initials":"P.J.H.M.",
-        "firstName": "Pim",
-        "prefix":"",
-        "surName":"Kuijpers",
-        "dateOfBirth": "2001-11-12T22:13:30.000Z",
-        "gender":"M",
-        "ranking":"7",
-        "rankingActual":"6,8",
-        "email":"pimkuijpers@home.nl",
-        "phone":"0612345678"
-    },
-    {
-        "knltbNumber":"12345633",        
-        "initials":"B.A.F.G.",
-        "firstName": "Bram",
-        "prefix":"",
-        "surName":"Kuijpers",
-        "dateOfBirth": "2004-04-23T22:13:30.000Z",
-        "gender":"M",
-        "ranking":"7",
-        "rankingActual":"6,8",
-        "email":"bramkuijpers@home.nl",
-        "phone":"0612345678"
-    }
-]}
+
+{
+    "knltbNumber":"12345611",
+    "initials":"R.J.M.",
+    "firstName": "Rob",
+    "prefix":"",
+    "surName":"Kuijpers",
+    "dateOfBirth": "1965-08-16T22:13:30.000Z",
+    "gender":"M",
+    "ranking":"7",
+    "rankingActual":"6,8",
+    "email":"robkuijpers@home.nl",
+    "phone":"0612345678"
+}
+{
+    "knltbNumber":"12345622",        
+    "initials":"P.J.H.M.",
+    "firstName": "Pim",
+    "prefix":"",
+    "surName":"Kuijpers",
+    "dateOfBirth": "2001-11-12T22:13:30.000Z",
+    "gender":"M",
+    "ranking":"7",
+    "rankingActual":"6,8",
+    "email":"pimkuijpers@home.nl",
+    "phone":"0612345678"
+}
+{
+    "knltbNumber":"12345633",        
+    "initials":"B.A.F.G.",
+    "firstName": "Bram",
+    "prefix":"",
+    "surName":"Kuijpers",
+    "dateOfBirth": "2004-04-23T22:13:30.000Z",
+    "gender":"M",
+    "ranking":"7",
+    "rankingActual":"6,8",
+    "email":"bramkuijpers@home.nl",
+    "phone":"0612345678"
+}

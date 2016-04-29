@@ -1,16 +1,22 @@
+
 {
-    "events": [
-        {
-            "date": "2016-08-07T22:10:30.000Z",
-            "name": "Toernooi opening",
-            "description": "Opening van het toernooi.",
-            "image": ""
-        },
-        {
-            "date": "2016-12-07T22:10:30.000Z",
-            "name": "Feestavond",
-            "description": "Carribean party night met BBQ.",
-            "image": ""
-        }
-    ]
+    "date": "2016-08-07T22:10:30.000Z",
+    "name": "Toernooi opening",
+    "description": "Opening van het toernooi.",
+    "image": ""
 }
+
+{
+    "date": "2016-12-08T22:10:30.000Z",
+    "name": "Feestavond",
+    "description": "Carribean party night met BBQ.",
+    "image": ""
+}
+
+{
+    "date": "2016-12-09T22:18:00.000Z",
+    "name": "Sluiting",
+    "description": "Prijsuitreiking en sluiting van het toernooi",
+    "image": ""
+}
+

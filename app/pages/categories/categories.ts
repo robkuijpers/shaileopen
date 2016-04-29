@@ -1,13 +1,30 @@
-import {Page} from 'ionic-angular';
+import {OnInit} from 'angular2/core';  
+import {IonicApp, Page, NavController} from 'ionic-angular';
+import {CategoriesService} from '../../services/categoriesService';
+import {Category} from '../../services/category';
 
 @Page({
-  templateUrl: 'build/pages/categories/categories.html'
+  templateUrl: 'build/pages/categories/categories.html',
+  providers: [CategoriesService]
 })
 
 export class CategoriesPage {
   
-  constructor() {
-
-  }
+  nav: NavController;
+  app: IonicApp;
   
+  categories: Array<Category>;
+    
+  constructor(private categoriesService: CategoriesService) {
+      this.categoriesService = categoriesService;
+  }
+
+  ngOnInit() {
+      this.categoriesService.getCategoriesByName().subscribe(
+          (data) => {
+              this.categories = data;
+          }, 
+          (err) => console.log(err));
+  }
+    
 }

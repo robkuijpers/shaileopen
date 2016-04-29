@@ -89,10 +89,12 @@ Run the app on and Andriod device.
 
 Step 4
 ======
-Changed data structure a bit.
+Changed data structure.
+
+mongoimport -h ds019470.mlab.com:19470 -d toernooi -c games -u toernooi -p oranje00 --file games.json
+
 Create a formatDate Pipe becaue Angular2 date format pipe did not work.
 Fixed navigation but still not how I want it!!!
-Fixed logo in header.
 Add services to retrieve data:
 - dates (ordered by date)
 - games (ordered by date, category)
@@ -100,30 +102,31 @@ Add services to retrieve data:
 - players (ordered by last name)
 - events (ordered by date)
 
-TODO: Better App icon, better splash.
-TODO: Check database connection and give error message if unavailable.
-
 Step 5
 ======
-Show data (create directives) for games, categories, players, events.
-Detail page for player with knltb rating.
-Detail page for categories with schema's.
+Query games by date.
+Query speler by knltb and add to team in games.
+Refresh current games.
 Splash spinner configuration.
 Spinner during service invocation.
+Fix logo in header.
+Style details pages (games, players, categories, events, about).
+Better App icon, better splash screen icon.
+Check database connection at startup and give error message if unavailable.
+Players per alphabet letter.
 
 Step 6
 ======
-Error handling
-Toasts
-Messages
-Dialogs
+Filter on players page per name per category.
+Show all games for player in players details page.
+Show players for category.
+Show shemas per category.
 
 Step 7
 ======
 Add favorites to persons and store on phone.
 Favorite persons page (remove favorite).
 Show all games of favorite persons.
-Add cup icon for winners.
 
 Step 8
 ======

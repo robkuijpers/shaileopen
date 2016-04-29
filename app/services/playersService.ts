@@ -10,6 +10,9 @@ export class PlayersService {
     private dbUrl: string = 'https://api.mlab.com/api/1/databases/toernooi/collections/';
     private dbKey: string = '&apiKey=sx-HvoL-mQvXhyiMCuaiPsmrerSiveyX';
 
+    // get player with knltbNumber 
+    // https://api.mlab.com/api/1/databases/toernooi/collections/players?q={%22knltbNumber%22:%2212345633%22}&apiKey=sx-HvoL-mQvXhyiMCuaiPsmrerSiveyX
+     
     private playersBySurName: string = 'players?s={%22surName%22:%201}';
     private playerByKnltbNumber: string = 'players?s={%22knltbNumber%22:%201}';
 
@@ -24,12 +27,11 @@ export class PlayersService {
             .map( (res:Response) => { 
                 return res.json();             
             })
-            .map( (array:any) => { 
+            .map( (players:any) => { 
                 let result: Array<Player> = [];
             
-                if(array[0] && array[0].players) {
-                    let arr = array[0].players; 
-                    arr.forEach( (player) => {
+                if(players.length > 0) {
+                    players.forEach( (player) => {
                         let p: Player = new Player(); 
                         p.knltbNumber = player.knltbNumber;
                         p.initials = player.initials;

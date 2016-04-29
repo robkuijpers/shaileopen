@@ -8,7 +8,16 @@
 <ion-content class="events">
   <ion-card>
     <ion-card-content>
-      Programma
+      <ion-list>
+        <ion-list-item class="events" *ngFor="#event of events">
+          <div>
+            {{ event.date }}<br>
+            {{ event.name }}<br>
+            {{ event.description }}<br>
+            <br>
+          </div>
+        </ion-list-item>
+      </ion-list>
     </ion-card-content>
   </ion-card>
 </ion-content>
