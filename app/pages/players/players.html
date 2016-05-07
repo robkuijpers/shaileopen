@@ -8,21 +8,7 @@
 <ion-content class="players">
   <ion-card>
     <ion-card-content>
-      <ion-list>
-        <ion-list-item class="player" *ngFor="#player of players">
-          <div class="icon-user"></div>
-          <div>
-            {{ player.knltbNumber }}<br>
-            {{ player.initials }} {{ player.prefix }} {{ player.surName }}<br>
-            <span class="icon-phone"></span>{{ player.phone }}
-            <span class="icon-envelop"></span>{{ player.email }}<br>
-            {{ player.dateOfBirth }} {{ player.gender }}<br>
-            {{ player.ranking }}  {{ player.rankingActual }}<br>
-            <br>
-            <br>
-          </div>
-        </ion-list-item>
-      </ion-list>
+      <alphabet-list [list]="players"></alphabet-list>
     </ion-card-content>
   </ion-card>
 </ion-content>

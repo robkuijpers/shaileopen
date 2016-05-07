@@ -11,7 +11,7 @@
     <ion-item>
       <ion-label>Datum</ion-label>
       <ion-select  [(ngModel)]="selectedDate" (change)="dateSelected($event)">
-        <ion-option *ngFor="#dt of dates" value="{{ dt }}">{{ dt | formatDate:dd-MMM-yyyy }}</ion-option>
+        <ion-option *ngFor="#dt of dates" [value]="dt">{{ dt | formatDate:dd-MMM-yyyy }}</ion-option>
       </ion-select>
     </ion-item>
   </ion-list>
@@ -22,8 +22,11 @@
         Gespeelde wedstrijden
       </ion-card-title>
       <ion-list>
+        <ion-list-item *ngIf="finishedGames.length === 0">
+          Geen wedstrijden.
+        </ion-list-item>  
         <ion-list-item class="game" *ngFor="#game of finishedGames">
-          <finished-game [game]=game></finished-game>
+          <finished-games [game]=game></finished-games>
       </ion-list-item>
       </ion-list>    
     </ion-card-content>
@@ -33,11 +36,14 @@
     <ion-card-content>
       <ion-card-title>
         <span>Nu bezig</span>
-        <span class="icon-loop2"></span>
+        <span class="icon-loop2 icon-button" (click)="refreshCurrentGames($event)"></span>
       </ion-card-title> 
       <ion-list>
+        <ion-list-item *ngIf="currentGames.length === 0">
+          Geen wedstrijden.
+        </ion-list-item> 
         <ion-list-item class="game" *ngFor="#game of currentGames">
-          <current-game [game]=game></current-game>
+          <current-games [game]=game></current-games>
         </ion-list-item>
       </ion-list> 
     </ion-card-content>  
@@ -49,8 +55,11 @@
         Geplande wedstrijden
       </ion-card-title>
       <ion-list>
+        <ion-list-item *ngIf="plannedGames.length === 0">
+          Geen wedstrijden.
+        </ion-list-item> 
         <ion-list-item class="game" *ngFor="#game of plannedGames">
-          <planned-game [game]=game></planned-game>
+          <planned-games [game]=game></planned-games>
         </ion-list-item>
       </ion-list> 
     </ion-card-content>  

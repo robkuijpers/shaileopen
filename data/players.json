@@ -1,12 +1,27 @@
 
 {
+    "knltbNumber":"12311611",
+    "initials":"H.",
+    "firstName": "Henk",
+    "prefix":"van der",
+    "surName":"Aa",
+    "dateOfBirth": {"$date": "1974-02-16T22:00:00.00Z"},
+    "gender":"M",
+    "club": "H.T.V.",
+    "ranking":"7",
+    "rankingActual":"6,8",
+    "email":"aa@home.nl",
+    "phone":"0618895678"
+}
+{
     "knltbNumber":"12345611",
     "initials":"R.J.M.",
     "firstName": "Rob",
     "prefix":"",
     "surName":"Kuijpers",
-    "dateOfBirth": "1965-08-16T22:13:30.000Z",
+    "dateOfBirth": {"$date": "1965-08-16T22:00:00.00Z"},
     "gender":"M",
+    "club": "Shaile",
     "ranking":"7",
     "rankingActual":"6,8",
     "email":"robkuijpers@home.nl",
@@ -18,8 +33,9 @@
     "firstName": "Pim",
     "prefix":"",
     "surName":"Kuijpers",
-    "dateOfBirth": "2001-11-12T22:13:30.000Z",
+    "dateOfBirth": {"$date": "2001-11-12T00:00:00.00Z"},
     "gender":"M",
+    "club": "Shaile",    
     "ranking":"7",
     "rankingActual":"6,8",
     "email":"pimkuijpers@home.nl",
@@ -31,10 +47,25 @@
     "firstName": "Bram",
     "prefix":"",
     "surName":"Kuijpers",
-    "dateOfBirth": "2004-04-23T22:13:30.000Z",
+    "dateOfBirth": {"$date": "2004-04-23T00:00:00.00Z"},
     "gender":"M",
+    "club": "Shaile",    
     "ranking":"7",
     "rankingActual":"6,8",
     "email":"bramkuijpers@home.nl",
     "phone":"0612345678"
+}
+{
+    "knltbNumber":"12615633",        
+    "initials":"A.",
+    "firstName": "Anton",
+    "prefix":"van",
+    "surName":"Zonder",
+    "dateOfBirth": {"$date": "1969-05-23T00:00:00.00Z"},
+    "gender":"M",
+    "club": "Carolus",    
+    "ranking":"7",
+    "rankingActual":"6,8",
+    "email":"none@home.nl",
+    "phone":"0614445678"
 }

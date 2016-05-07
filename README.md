@@ -91,7 +91,7 @@ Step 4
 ======
 Changed data structure.
 
-mongoimport -h ds019470.mlab.com:19470 -d toernooi -c games -u toernooi -p oranje00 --file games.json
+mongoimport -h ds019470.mlab.com:19470 -d toernooi -c games -u toernooi -p xxxxxxx --file games.json
 
 Create a formatDate Pipe becaue Angular2 date format pipe did not work.
 Fixed navigation but still not how I want it!!!
@@ -105,22 +105,26 @@ Add services to retrieve data:
 Step 5
 ======
 Query games by date.
-Query speler by knltb and add to team in games.
+Players per alphabet letter.
+
 Refresh current games.
 Splash spinner configuration.
 Spinner during service invocation.
 Fix logo in header.
-Style details pages (games, players, categories, events, about).
 Better App icon, better splash screen icon.
 Check database connection at startup and give error message if unavailable.
-Players per alphabet letter.
+
+
+Style details pages (games, players, categories, events, about).
+
 
 Step 6
 ======
-Filter on players page per name per category.
+Query speler by knltb and add to team in games.
+Filter on players page for surname
 Show all games for player in players details page.
 Show players for category.
-Show shemas per category.
+Show shemas with players per category.
 
 Step 7
 ======

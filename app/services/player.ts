@@ -7,13 +7,14 @@ export class Player {
     surName: string = "";
     dateOfBirth: Date = null;
     gender: string = "";
+    club: string = "";
     email: string = "";
     phone: string = "";    
     ranking: string = "";
     rankingActual: string = "";
                                 
-    constructor() {
-
+    constructor(knltbNumber: string) {
+        this.knltbNumber = knltbNumber;
     }
     
 }    

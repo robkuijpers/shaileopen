@@ -13,4 +13,19 @@
         text-align: right;
     }
     
+    .icon-button {
+        cursor: pointer;
+        float: right;   
+    }
+    
+    .single {
+        font-family: 'icomoon';     
+        @extend .icon-user;
+    }
+    
+    .double {
+        font-family: 'icomoon';
+        @extend .icon-users;
+    }
+    
 }

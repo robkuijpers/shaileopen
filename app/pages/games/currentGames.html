@@ -1,0 +1,30 @@
+<div>{{ game.category }} {{ game.date | formatTime:hh:mm }}</div>
+<div>
+    <span [ngClass]="game.type"></span>
+    <span>
+        <span *ngIf="game.team1.players.length > 0" (click)='playerClicked(game.team1.players[0])'>
+            {{ game.team1.players[0].knltbNumber}}
+        </span>
+        <span *ngIf="game.team1.players.length > 1" (click)='playerClicked(game.team1.players[1])'>
+            - {{ game.team1.players[1].knltbNumber}}
+        </span>
+    </span>
+    <span *ngFor="#set of game.team1.sets">
+    | {{ set }} 
+    </span>
+</div>
+
+<div>
+    <span [ngClass]="game.type"></span>
+    <span>
+        <span *ngIf="game.team2.players.length > 0" (click)='playerClicked(game.team2.players[0])'>
+            {{ game.team2.players[0].knltbNumber}}
+        </span>
+        <span *ngIf="game.team2.players.length > 1" (click)='playerClicked(game.team2.players[1])'>
+            - {{ game.team2.players[1].knltbNumber}}
+        </span>
+    </span>
+    <span *ngFor="#set of game.team2.sets">
+    | {{ set }} 
+    </span>                        
+</div>

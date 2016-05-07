@@ -1,6 +1,6 @@
 
 {
-    "date": "2016-08-08T22:13:30.000Z",
+    "date": {"$date": "2016-08-07T15:30:00Z"},
     "category": "HE8",
     "type": "double",
     "status": "finished",
@@ -17,9 +17,9 @@
     "result": "team2"
 }
 {
-    "date": "2016-08-08T22:16:30.000Z",
+    "date": {"$date": "2016-08-07T12:00:00Z"},
     "category": "HE8",
-    "type": "single",
+    "type": "double",
     "status": "current",
     "court": "3",
     "duration": "",
@@ -34,7 +34,7 @@
     "result": ""
 }
 {
-    "date": "2016-08-09T22:10:30.000Z",
+    "date": {"$date": "2016-08-08T10:00:00Z"},
     "category": "HE7",
     "type": "single",
     "court": "2",

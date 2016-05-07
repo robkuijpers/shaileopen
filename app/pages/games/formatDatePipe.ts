@@ -15,9 +15,8 @@ export class FormatDatePipe {
     }
     
     transform(value: Date, pattern: string): string {
-        let d = value.getDate() + ' ';
-        d += this.months[value.getMonth()] + ' ';
-        d += value.getFullYear();
-        return d;
+        return value.getDate() + ' ' + 
+               this.months[value.getMonth()] + ' ' + 
+               value.getFullYear();
     }
 }

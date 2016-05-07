@@ -27,8 +27,9 @@ export class CategoriesService {
             
                 if(categories.length > 0) {
                     categories.forEach( (category) => {
-                        let c: Category = new Category(); 
-                        c.name = category.name;
+                        let c: Category = new Category(category.name); 
+                        c.schemas = 0;
+                        c.inschrijvingen = 0;
                         result.push(c);
                     });
                 } 

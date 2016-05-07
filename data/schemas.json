@@ -1,0 +1,10 @@
+{
+    "category": "HD7",
+    "type": "poule",
+    "teams": [
+        { "team": "123" },
+        { "team": "321" },
+        { "team": "311" },
+        { "team": "111" },
+    ]
+}

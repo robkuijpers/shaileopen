@@ -28,7 +28,7 @@ export class EventsService {
                 if(events.length > 0) {
                     events.forEach( (event) => {
                         let e: Event = new Event(); 
-                        e.date = event.date;
+                        e.date = new Date(event.date.$date);
                         e.name = event.name;
                         e.description = event.description;
                         result.push(e);

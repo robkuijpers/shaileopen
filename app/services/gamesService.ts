@@ -10,26 +10,27 @@ export class GamesService {
     private dbUrl: string = 'https://api.mlab.com/api/1/databases/toernooi/collections/';
     private dbKey: string = '&apiKey=sx-HvoL-mQvXhyiMCuaiPsmrerSiveyX';
 
-   // https://api.mlab.com/api/1/databases/toernooi/collections/dates?s={%22day%22:1}&apiKey=sx-HvoL-mQvXhyiMCuaiPsmrerSiveyX
-
-    private allDatesByDate: string = 'dates?s={%22day%22:1}';
-    private allGamesForDateByDate: string = 'games?s={%22date%22:1}';
-
+    // https://api.mlab.com/api/1/databases/toernooi/collections/dates?s={%22day%22:1}&apiKey=sx-HvoL-mQvXhyiMCuaiPsmrerSiveyX
+    
     constructor(private http: Http) {
         this.http = http;
     }
 
     getDates() {
         
-        return this.http.get(this.dbUrl + this.allDatesByDate + this.dbKey)
+        let allDatesByDate: string = 'dates?s={%22day%22:1}';
+            
+        return this.http.get(this.dbUrl + allDatesByDate + this.dbKey)
             .map( (res:Response) => { 
                 return res.json();             
             })
             .map( (dates:any) => {
                 let result: Array<Date> = [];
                 if(dates.length > 0) {
-                   dates.forEach( (date) => { 
-                      result.push(new Date(date.day));
+                   dates.forEach( (date) => {
+                      
+                      var localDate = new Date(date.day.$date);                        
+                      result.push(localDate);
                    })
                 }
                 return result;    
@@ -37,9 +38,24 @@ export class GamesService {
     }
 
 
-    getGamesForDate(date: Date) {
-
-        return this.http.get(this.dbUrl + this.allGamesForDateByDate + this.dbKey)
+    getGamesForDateByDate(date: Date) {
+            
+        let todayStart: Date = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0, 0);
+        let todayEnd: Date = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59, 999);
+        
+        let forDate: Object = {
+            date: {
+               $gte: { $date: todayStart.toISOString() },
+               $lt: { $date: todayEnd.toISOString() },
+            }
+        };
+        
+        let byDate: any = { date: 1 };
+            
+        let q = JSON.stringify(forDate);
+        let s = JSON.stringify(byDate);
+                
+        return this.http.get(this.dbUrl + "games?q=" + q + "&s=" +  s + this.dbKey)
             .map( (res:Response) => { 
                 return res.json();             
             })
@@ -48,7 +64,7 @@ export class GamesService {
                 if(games.length > 0) {
                     games.forEach( (game) => {
                         let g: Game = new Game(); 
-                        g.date = game.date;
+                        g.date = new Date(game.date.$date);
                         g.status = game.status;
                         g.category = game.category;
                         g.type = game.type;
@@ -65,4 +81,49 @@ export class GamesService {
             }); 
     }       
     
+    
+    getCurrentGamesForDateByDate(date: Date) {
+             
+        let todayStart: Date = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0, 0);
+        let todayEnd: Date = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59, 999);
+           
+        let query: Object = {
+            date: {
+               $gte: { $date: todayStart.toISOString() },
+               $lt: { $date: todayEnd.toISOString() },
+            },
+            status: 'current'
+        };
+        
+        let byDate: any = { date: 1 };
+            
+        let q = JSON.stringify(query);
+        let s = JSON.stringify(byDate);
+                
+        return this.http.get(this.dbUrl + "games?q=" + q + "&s=" +  s + this.dbKey)
+            .map( (res:Response) => { 
+                return res.json();             
+            })
+            .map( (games:any) => { 
+                let result: Array<Game> = [];
+                if(games.length > 0) {
+                    games.forEach( (game) => {
+                        let g: Game = new Game(); 
+                        g.date = new Date(game.date.$date);
+                        g.status = game.status;
+                        g.category = game.category;
+                        g.type = game.type;
+                        g.court = game.court;
+                        g.duration = game.duration;
+                        g.team1 = game.team1;
+                        g.team2 = game.team2
+                        g.result = game.result;
+                        result.push(g);
+                    });
+                } 
+            
+                return result;                  
+            }); 
+    }  
+     
 }

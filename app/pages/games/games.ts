@@ -2,14 +2,15 @@ import {OnInit} from 'angular2/core';
 import {IonicApp, Page, NavController} from 'ionic-angular';
 import {GamesService} from '../../services/gamesService';
 import {Game} from '../../services/game';
+import {Player} from '../../services/player';
 import {FormatDatePipe} from './formatDatePipe';
-import {FinishedGame} from './finishedGame';
-import {CurrentGame} from './currentGame';
-import {PlannedGame} from './plannedGame';
+import {FinishedGames} from './finishedGames';
+import {CurrentGames} from './currentGames';
+import {PlannedGames} from './plannedGames';
 
 @Page({
   templateUrl: 'build/pages/games/games.html',
-  directives: [FinishedGame, CurrentGame, PlannedGame],
+  directives: [FinishedGames, CurrentGames, PlannedGames],
   providers: [GamesService],
   pipes: [FormatDatePipe]
 })
@@ -38,9 +39,15 @@ export class GamesPage {
           (err) => console.log(err));
   }
     
-  dateSelected(evt) {
-    this.gamesService.getGamesForDate(this.selectedDate).subscribe(
+  dateSelected(evt) { 
+    
+    this.gamesService.getGamesForDateByDate(this.selectedDate).subscribe(
         (games: Array<Game>) => {
+            
+            this.finishedGames = [];
+            this.currentGames = [];
+            this.plannedGames = [];
+    
             games.forEach( (game: Game) => {
                 if(game.isFinished()) {
                     this.finishedGames.push(game);
@@ -54,6 +61,20 @@ export class GamesPage {
             });
         },
         (err) => console.log(err));
+  }
+  
+  refreshCurrentGames(evt) {
+      
+    this.gamesService.getCurrentGamesForDateByDate(this.selectedDate).subscribe(
+        (games: Array<Game>) => {
+            
+            this.currentGames = [];
+            
+            games.forEach( (game: Game) => {
+                this.currentGames.push(game);
+            });
+        },
+        (err) => console.log(err));    
   }
   
   // The the dropdown contains the current date then select it,
@@ -84,4 +105,8 @@ export class GamesPage {
       return null;
   }
     
+  // Event from child components  
+  showPlayer(player: Player) {
+      console.log('showPlayer:' + player.knltbNumber);
+  }  
 }

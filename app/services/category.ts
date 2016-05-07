@@ -1,9 +1,11 @@
 export class Category {  
 
     name: string = "";
+    schemas: number = 0;
+    inschrijvingen: number = 0;
                         
-    constructor() {
-
+    constructor(name: string) {
+        this.name = name;
     }
 
 }    
