@@ -126,14 +126,13 @@ Players per alphabet letter.
 
 Better App icon, better splash screen icon.
 
-
 TODO:
 - Refresh current games.
 - Spinner during service invocation.
 - Fix logo in header.
 - Check database connection at startup and give error message if unavailable.
 - Style details pages (games, players, categories, events, about).
-
+- Fix navigation: remove back button when opening from home page.
 
 Step 6
 ======
