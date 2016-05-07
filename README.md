@@ -66,19 +66,33 @@ Run the app on and Andriod device
 Step 3
 ======
 Added about page in menu.
+
 Added icons in tiles on home page.
+
 Remove menu in all pages, it is only needed in app.ts.
+
 Added icons to menu.
+
 Added logo image to toolbar.
+
 Added gulp task to copy images.
+
 Added icomoon: home, refresh and about/info icon.
+
 Whitespace around logo image.
+
 Styling and logo in toolbar.
+
 Add icons in menu.
+
 Style tiles on home page.
+
 Add slider with sponsor images (hide pagination bulltes with css).
+
 Added naviagation when clicking tiles on home page.
+
 Changes splashscreen settings
+
 
 Run the app on an iPhone:
 - sudo npm install -g --unsafe-perm ios-deploy
@@ -94,7 +108,9 @@ Changed data structure.
 mongoimport -h ds019470.mlab.com:19470 -d toernooi -c games -u toernooi -p xxxxxxx --file games.json
 
 Create a formatDate Pipe becaue Angular2 date format pipe did not work.
+
 Fixed navigation but still not how I want it!!!
+
 Add services to retrieve data:
 - dates (ordered by date)
 - games (ordered by date, category)
@@ -105,31 +121,38 @@ Add services to retrieve data:
 Step 5
 ======
 Query games by date.
+
 Players per alphabet letter.
 
-Refresh current games.
-Splash spinner configuration.
-Spinner during service invocation.
-Fix logo in header.
 Better App icon, better splash screen icon.
-Check database connection at startup and give error message if unavailable.
 
 
-Style details pages (games, players, categories, events, about).
+TODO:
+- Refresh current games.
+- Spinner during service invocation.
+- Fix logo in header.
+- Check database connection at startup and give error message if unavailable.
+- Style details pages (games, players, categories, events, about).
 
 
 Step 6
 ======
+Retrieve and show KNLTB ranking and actual ranking.
+
 Query speler by knltb and add to team in games.
+
 Filter on players page for surname
+
 Show all games for player in players details page.
-Show players for category.
-Show shemas with players per category.
+
+Show shemas with poules and players.
 
 Step 7
 ======
 Add favorites to persons and store on phone.
+
 Favorite persons page (remove favorite).
+
 Show all games of favorite persons.
 
 Step 8
