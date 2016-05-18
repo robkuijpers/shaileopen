@@ -39,7 +39,7 @@ gulp.task('myFonts', [], function(done){
 });
 
 gulp.task('myImages', [], function(done){
-  return gulp.src('app/images/*.{png,jpg}')
+  return gulp.src('app/images/*.{png,jpg,svg}')
   .pipe(gulp.dest('www/build/images/'));
 });
 

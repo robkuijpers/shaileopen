@@ -1,15 +1,43 @@
 .players {
   
-  .alphabetList {
-      
-      .letter {
-          
-      }
-      
-      .entry {
-          
-      }
-      
+  ion-card-header {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    
+    .right {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    
+    span {
+      padding: 0 3px;
+    }
   }
   
+  ion-item {
+    display: block;
+    margin: 12px 0;    
+    border-bottom: 1px solid #E6E3E3;
+    padding-bottom: 12px;
+  }
+  
+  .player-icon {
+    font-size: 1.6rem;
+  }
+  
+  .knltb {
+    font-size: 1.2rem;
+  }
+  
+  .knltb-image {
+    display: inline-block;
+    width: 16px;
+  }
+  
+  .knltb-data {
+    border-radius: 2px;
+    padding: 0 2px;
+    background-color: #E6E3E3;
+  }
 }

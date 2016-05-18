@@ -1,5 +1,5 @@
 import {OnInit} from 'angular2/core';  
-import {IonicApp, Page, NavController} from 'ionic-angular';
+import {Page, Loading, NavController} from 'ionic-angular';
 import {GamesService} from '../../services/gamesService';
 import {Game} from '../../services/game';
 import {Player} from '../../services/player';
@@ -17,26 +17,37 @@ import {PlannedGames} from './plannedGames';
 
 export class GamesPage {
   
-  nav: NavController;
-  app: IonicApp;
   dates: Array<Date> = [];
   selectedDate: Date = new Date();
      
   finishedGames: Array<Game> = [];
   currentGames: Array<Game> = [];
   plannedGames: Array<Game> = [];
-            
-  constructor(private gamesService: GamesService) {
+  
+  rotate = false;
+              
+  constructor(public nav: NavController, private gamesService: GamesService) {
       this.gamesService = gamesService;
   }
 
   ngOnInit() {
+      
+      let loading: Loading = Loading.create({
+         content: "Please wait..."
+      });
+      
+      this.nav.present(loading);
+      
       this.gamesService.getDates().subscribe(
           (data) => {
+              loading.dismiss();
               this.dates = data;
               this.setCurrentDay();
           }, 
-          (err) => console.log(err));
+          (err) => {
+              loading.dismiss();
+              console.log(err)
+          });
   }
     
   dateSelected(evt) { 
@@ -63,8 +74,16 @@ export class GamesPage {
         (err) => console.log(err));
   }
   
-  refreshCurrentGames(evt) {
+  refreshGames(evt) {
+    
+    let loading: Loading = Loading.create({
+       content: "Please wait..."
+    });
       
+    // Add rotate class to icon.  
+    this.rotate = true;
+    this.nav.present(loading);
+  
     this.gamesService.getCurrentGamesForDateByDate(this.selectedDate).subscribe(
         (games: Array<Game>) => {
             
@@ -73,8 +92,15 @@ export class GamesPage {
             games.forEach( (game: Game) => {
                 this.currentGames.push(game);
             });
+            
+            loading.dismiss();
+            this.rotate = false;  // Remove rotate class from icon. 
         },
-        (err) => console.log(err));    
+        (err) => { 
+            loading.dismiss();
+            this.rotate = false;  // Remove rotate class from icon.  
+            console.log(err)
+        });    
   }
   
   // The the dropdown contains the current date then select it,

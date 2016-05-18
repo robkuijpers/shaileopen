@@ -10,7 +10,7 @@ export class CategoriesService {
     private dbUrl: string = 'https://api.mlab.com/api/1/databases/toernooi/collections/';
     private dbKey: string = '&apiKey=sx-HvoL-mQvXhyiMCuaiPsmrerSiveyX';
 
-    private categoriesByName: string = 'categories?s={%22name%22:%201}';
+    private categoriesByOrder: string = 'categories?s={%order%22:%201}';
 
     constructor(private http: Http) {
         this.http = http;
@@ -18,7 +18,7 @@ export class CategoriesService {
 
     getCategoriesByName() {
 
-        return this.http.get(this.dbUrl + this.categoriesByName + this.dbKey)
+        return this.http.get(this.dbUrl + this.categoriesByOrder + this.dbKey)
             .map( (res:Response) => { 
                 return res.json();             
             })
@@ -28,8 +28,8 @@ export class CategoriesService {
                 if(categories.length > 0) {
                     categories.forEach( (category) => {
                         let c: Category = new Category(category.name); 
-                        c.schemas = 0;
-                        c.inschrijvingen = 0;
+                        c.schemas = category.schemas;
+                        c.inschrijvingen = category.inschrijvingen;
                         result.push(c);
                     });
                 } 

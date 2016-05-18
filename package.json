@@ -1,18 +1,17 @@
-{  
+{
   "version": "0.4.0",
   "name": "shaileopen",
   "description": "Shaile Open: An Ionic project",
-  
   "dependencies": {
-    "angular2": "2.0.0-beta.8",
+    "angular2": "2.0.0-beta.15",
     "es6-promise": "3.0.2",
-    "es6-shim": "0.33.13",
-    "ionic-angular": "2.0.0-beta.3",
-    "ionic-native": "^1.1.0",
-    "ionicons": "3.0.0-alpha.3",
+    "es6-shim": "0.35.0",
+    "ionic-angular": "2.0.0-beta.6",
+    "ionic-native": "^1.2.0",
+    "ionicons": "3.0.0",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.2",
-    "zone.js": "0.5.15"
+    "zone.js": "0.6.10"
   },
   "devDependencies": {
     "del": "2.2.0",
@@ -31,7 +30,8 @@
     "cordova-plugin-whitelist",
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
-    "ionic-plugin-keyboard"
+    "ionic-plugin-keyboard",
+    "cordova-plugin-network-information"
   ],
   "cordovaPlatforms": [
     "ios",

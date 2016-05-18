@@ -1,5 +1,5 @@
 import {OnInit} from 'angular2/core';  
-import {IonicApp, Page, NavController} from 'ionic-angular';
+import {Page, Loading, NavController} from 'ionic-angular';
 import {CategoriesService} from '../../services/categoriesService';
 import {Category} from '../../services/category';
 
@@ -9,22 +9,30 @@ import {Category} from '../../services/category';
 })
 
 export class CategoriesPage {
-  
-  nav: NavController;
-  app: IonicApp;
-  
+   
   categories: Array<Category>;
     
-  constructor(private categoriesService: CategoriesService) {
+  constructor(public nav: NavController, private categoriesService: CategoriesService) {
       this.categoriesService = categoriesService;
   }
-
+  
   ngOnInit() {
+      
+      let loading: Loading = Loading.create({
+         content: "Please wait..."
+      });
+      
+      this.nav.present(loading);
+            
       this.categoriesService.getCategoriesByName().subscribe(
           (data) => {
+              loading.dismiss();
               this.categories = data;
           }, 
-          (err) => console.log(err));
+          (err) => {
+              loading.dismiss(); 
+              console.log(err)
+          });
   }
     
 }

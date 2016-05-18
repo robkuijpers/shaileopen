@@ -2,7 +2,12 @@
     <button menuToggle>
         <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Shaile Open</ion-title>
+    <ion-title>Shaile Open</ion-title>  
+    <ion-buttons end>
+      <button class="toolbar-logo">       
+        <a href="http://www.shaile.nl" target="_blank"></a>  
+      </button>
+    </ion-buttons> 
 </ion-navbar>
              
 <ion-content class="games">
@@ -16,6 +21,17 @@
     </ion-item>
   </ion-list>
   
+  <ion-card>
+    <ion-card-header>
+      Wedstrijden
+    </ion-card-header>
+    <ion-card-content (click)="refreshGames($event)">
+        <span>Verversen</span>
+        <img src="build/images/loop2.svg" style="width: 12px; display: inline-block;" [class.icon-spin]="rotate" />
+        <!--<i class="icon-loop2" [class.icon-spin]="rotate" (click)="refreshGames($event)"></i>-->
+    </ion-card-content>
+  </ion-card>
+    
   <ion-card>
     <ion-card-content>
       <ion-card-title>
@@ -36,7 +52,6 @@
     <ion-card-content>
       <ion-card-title>
         <span>Nu bezig</span>
-        <span class="icon-loop2 icon-button" (click)="refreshCurrentGames($event)"></span>
       </ion-card-title> 
       <ion-list>
         <ion-list-item *ngIf="currentGames.length === 0">
@@ -64,4 +79,8 @@
       </ion-list> 
     </ion-card-content>  
   </ion-card>
+  
+   <!--<i class="icon-loop2 icon-spin"></i>
+   <img class="icon-spin" src="/build/images/icon.png"/>-->
+
 </ion-content>

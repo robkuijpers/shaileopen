@@ -1,50 +1,50 @@
-    {"name":"HE3", "schemas" : 0, "inschrijvingen": 0}
-    {"name":"DE3", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"HD3", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DD3", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"GD3", "schemas" : 0, "inschrijvingen": 0}
-    {"name":"HE4", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DE4", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"HD4", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DD4", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"GD4", "schemas" : 0, "inschrijvingen": 0}
-    {"name":"HE5", "schemas" : 0, "inschrijvingen": 0}
-    {"name":"DE5", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"HD5", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DD5", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"GD5", "schemas" : 0, "inschrijvingen": 0}
-    {"name":"HE5 35+", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DE5 35+", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"HD5 35+", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DD5 35+", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"GD5-35+", "schemas" : 0, "inschrijvingen": 0}
-    {"name":"HE6", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DE6", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"HD6", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DD6", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"GD6", "schemas" : 0, "inschrijvingen": 0}
-    {"name":"HE6 35+", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DE6 35+", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"HD6 35+", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DD6 35+", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"GD6-35+", "schemas" : 0, "inschrijvingen": 0}
-    {"name":"HE7", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DE7", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"HD7", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DD7", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"GD7", "schemas" : 0, "inschrijvingen": 0}
-    {"name":"HE7 35+", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DE7 35+", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"HD7 35+", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DD7 35+", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"GD7-35+", "schemas" : 0, "inschrijvingen": 0}
-    {"name":"HE8", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DE8", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"HD5", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DD8", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"GD8", "schemas" : 0, "inschrijvingen": 0}
-    {"name":"HE8 35+", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DE8 35+", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"HD8 35+", "schemas" : 0, "inschrijvingen": 0} 
-    {"name":"DD8 35+", "schemas" : 0, "inschrijvingen": 0}
-    {"name":"GD8-35+", "schemas" : 0, "inschrijvingen": 0}       
+    {"_id": "ObjectID(he3)", "name": "HE3", "schemas" : 0, "inschrijvingen": 0, "order": 1}
+    {"name":"DE3", "schemas" : 0, "inschrijvingen": 0, "order": 2} 
+    {"name":"HD3", "schemas" : 0, "inschrijvingen": 0, "order": 3} 
+    {"name":"DD3", "schemas" : 0, "inschrijvingen": 0, "order": 4} 
+    {"name":"GD3", "schemas" : 0, "inschrijvingen": 0, "order": 5}
+    {"name":"HE4", "schemas" : 0, "inschrijvingen": 0, "order": 6} 
+    {"name":"DE4", "schemas" : 0, "inschrijvingen": 0, "order": 7} 
+    {"name":"HD4", "schemas" : 0, "inschrijvingen": 0, "order": 8} 
+    {"name":"DD4", "schemas" : 0, "inschrijvingen": 0, "order": 9} 
+    {"name":"GD4", "schemas" : 0, "inschrijvingen": 0, "order": 10}
+    {"name":"HE5", "schemas" : 0, "inschrijvingen": 0, "order": 11}
+    {"name":"DE5", "schemas" : 0, "inschrijvingen": 0, "order": 12} 
+    {"name":"HD5", "schemas" : 0, "inschrijvingen": 0, "order": 13} 
+    {"name":"DD5", "schemas" : 0, "inschrijvingen": 0, "order": 14} 
+    {"name":"GD5", "schemas" : 0, "inschrijvingen": 0, "order": 15}
+    {"name":"HE5 35+", "schemas" : 0, "inschrijvingen": 0, "order": 16} 
+    {"name":"DE5 35+", "schemas" : 0, "inschrijvingen": 0, "order": 17} 
+    {"name":"HD5 35+", "schemas" : 0, "inschrijvingen": 0, "order": 18} 
+    {"name":"DD5 35+", "schemas" : 0, "inschrijvingen": 0, "order": 19} 
+    {"name":"GD5-35+", "schemas" : 0, "inschrijvingen": 0, "order": 20}
+    {"name":"HE6", "schemas" : 0, "inschrijvingen": 0, "order": 21} 
+    {"name":"DE6", "schemas" : 0, "inschrijvingen": 0, "order": 22} 
+    {"name":"HD6", "schemas" : 0, "inschrijvingen": 0, "order": 23} 
+    {"name":"DD6", "schemas" : 0, "inschrijvingen": 0, "order": 24} 
+    {"name":"GD6", "schemas" : 0, "inschrijvingen": 0, "order": 25}
+    {"name":"HE6 35+", "schemas" : 0, "inschrijvingen": 0, "order": 26} 
+    {"name":"DE6 35+", "schemas" : 0, "inschrijvingen": 0, "order": 27} 
+    {"name":"HD6 35+", "schemas" : 0, "inschrijvingen": 0, "order": 28} 
+    {"name":"DD6 35+", "schemas" : 0, "inschrijvingen": 0, "order": 29} 
+    {"name":"GD6-35+", "schemas" : 0, "inschrijvingen": 0, "order": 30}
+    {"name":"HE7", "schemas" : 0, "inschrijvingen": 0, "order": 31} 
+    {"name":"DE7", "schemas" : 0, "inschrijvingen": 0, "order": 32} 
+    {"name":"HD7", "schemas" : 0, "inschrijvingen": 0, "order": 33} 
+    {"name":"DD7", "schemas" : 0, "inschrijvingen": 0, "order": 34} 
+    {"name":"GD7", "schemas" : 0, "inschrijvingen": 0, "order": 35}
+    {"name":"HE7 35+", "schemas" : 0, "inschrijvingen": 0, "order": 36} 
+    {"name":"DE7 35+", "schemas" : 0, "inschrijvingen": 0, "order": 37} 
+    {"name":"HD7 35+", "schemas" : 0, "inschrijvingen": 0, "order": 38} 
+    {"name":"DD7 35+", "schemas" : 0, "inschrijvingen": 0, "order": 39} 
+    {"name":"GD7 35+", "schemas" : 0, "inschrijvingen": 0, "order": 40}
+    {"name":"HE8", "schemas" : 0, "inschrijvingen": 0, "order": 41} 
+    {"name":"DE8", "schemas" : 0, "inschrijvingen": 0, "order": 42} 
+    {"name":"HD5", "schemas" : 0, "inschrijvingen": 0, "order": 43} 
+    {"name":"DD8", "schemas" : 0, "inschrijvingen": 0, "order": 44} 
+    {"name":"GD8", "schemas" : 0, "inschrijvingen": 0, "order": 45}
+    {"name":"HE8 35+", "schemas" : 0, "inschrijvingen": 0, "order": 46} 
+    {"name":"DE8 35+", "schemas" : 0, "inschrijvingen": 0, "order": 47} 
+    {"name":"HD8 35+", "schemas" : 0, "inschrijvingen": 0, "order": 48} 
+    {"name":"DD8 35+", "schemas" : 0, "inschrijvingen": 0, "order": 49}
+    {"name":"GD8 35+", "schemas" : 0, "inschrijvingen": 0, "order": 50}       

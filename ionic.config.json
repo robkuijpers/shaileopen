@@ -2,5 +2,8 @@
   "name": "shaileopen",
   "app_id": "",
   "v2": true,
-  "typescript": true
+  "typescript": true,
+  "proxies": [{
+    "path": "/api", "proxyUrl": "http://publiek.mijnknltb.nl/spelersprofiel.aspx"
+  }]
 }

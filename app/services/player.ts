@@ -10,8 +10,10 @@ export class Player {
     club: string = "";
     email: string = "";
     phone: string = "";    
-    ranking: string = "";
-    rankingActual: string = "";
+    rankingSingleEndOfYear: string = "";
+    rankingSingleActual: string = "";
+    rankingDoubleEndOfYear: string = "";
+    rankingDoubleActual: string = "";    
                                 
     constructor(knltbNumber: string) {
         this.knltbNumber = knltbNumber;

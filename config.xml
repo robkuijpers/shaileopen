@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.shaileopen807237" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>shaileopen</name>
-  <description>An Ionic Framework and Cordova project.</description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+  <description>Shaile Open</description>
+  <author email="dekuijpers@gmail.com" href="http://dekuijpers.com/">Rob Kuijpers</author>
   <content src="index.html"/>
   <access origin="*"/>
   <allow-intent href="http://*/*"/>
@@ -82,5 +82,6 @@
   <plugin name="cordova-plugin-splashscreen" spec="~3.2.1"/>
   <plugin name="cordova-plugin-statusbar" spec="~2.1.2"/>
   <plugin name="ionic-plugin-keyboard" spec="~2.0.1"/>
+  <plugin name="cordova-plugin-network-information" spec="~1.2.1"/>
   <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
 </widget>

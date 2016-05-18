@@ -1,4 +1,4 @@
-import {Page} from 'ionic-angular';
+import {Page, NavController} from 'ionic-angular';
 
 @Page({
   templateUrl: 'build/pages/about/about.html'
@@ -6,8 +6,8 @@ import {Page} from 'ionic-angular';
 
 export class AboutPage {
   
-  constructor() {
+  constructor(public nav: NavController) {
 
   }
-
+  
 }

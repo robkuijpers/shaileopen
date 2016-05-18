@@ -1,5 +1,5 @@
 import {OnInit} from 'angular2/core';  
-import {IonicApp, Page, NavController} from 'ionic-angular';
+import {Page, Loading, NavController} from 'ionic-angular';
 import {EventsService} from '../../services/eventsService';
 import {Event} from '../../services/event';
 
@@ -10,21 +10,29 @@ import {Event} from '../../services/event';
 
 export class EventsPage {
 
-  nav: NavController;
-  app: IonicApp;
-  
   events: Array<Event>;
     
-  constructor(private eventsService: EventsService) {
+  constructor(public nav: NavController, private eventsService: EventsService) {
       this.eventsService = eventsService;
   }
 
   ngOnInit() {
+      
+      let loading: Loading = Loading.create({
+         content: "Please wait..."
+      });
+      
+      this.nav.present(loading);
+            
       this.eventsService.getEventsByDate().subscribe(
           (data) => {
+              loading.dismiss();
               this.events = data;
           }, 
-          (err) => console.log(err));
+          (err) => { 
+              loading.dismiss();    
+              console.log(err)
+          });
   }
     
 }

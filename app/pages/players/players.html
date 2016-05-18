@@ -2,11 +2,20 @@
     <button menuToggle>
         <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Shaile Open</ion-title>
+    <ion-title>Shaile Open</ion-title>  
+    <ion-buttons end>
+      <button class="toolbar-logo">       
+        <a href="http://www.shaile.nl" target="_blank"></a>  
+      </button>
+    </ion-buttons>    
 </ion-navbar>
              
 <ion-content class="players">
+  <ion-searchbar [(ngModel)]="searchQuery" (input)="getFilteredPlayers($event)"></ion-searchbar>
   <ion-card>
+    <ion-card-header *ngIf="players">
+      <div class="right" *ngIf="players"><span>Totaal</span><ion-badge>{{ players.length }}</ion-badge></div>
+    </ion-card-header>
     <ion-card-content>
       <alphabet-list [list]="players"></alphabet-list>
     </ion-card-content>

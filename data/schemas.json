@@ -1,6 +1,55 @@
 {
+    "name": "A",
     "category": "HD7",
     "type": "poule",
+    "teams": [
+        { "team": "123" },
+        { "team": "321" },
+        { "team": "311" },
+        { "team": "111" },
+    ]
+}
+
+{
+    "name": "B",
+    "category": "HD7",
+    "type": "poule",
+    "teams": [
+        { "team": "123" },
+        { "team": "321" },
+        { "team": "311" },
+        { "team": "111" },
+    ]
+}
+
+{
+    "name": "Halve finale",
+    "category": "HD7",
+    "type": "semi-final",
+    "teams": [
+        { "team": "123" },
+        { "team": "321" },
+        { "team": "311" },
+        { "team": "111" },
+    ]
+}
+
+{
+    "name": "Halve finale",
+    "category": "HD7",
+    "type": "semi-final",
+    "teams": [
+        { "team": "123" },
+        { "team": "321" },
+        { "team": "311" },
+        { "team": "111" },
+    ]
+}
+
+{
+    "name": "Finale",
+    "category": "HD7",
+    "type": "final",
     "teams": [
         { "team": "123" },
         { "team": "321" },

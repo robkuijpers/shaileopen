@@ -19,7 +19,7 @@ export class CurrentGames {
     }
     
     playerClicked(player) {
-        this.showPlayer.next(player);
+        this.showPlayer.emit(player);
     }
     
 }

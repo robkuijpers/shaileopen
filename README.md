@@ -126,33 +126,48 @@ Players per alphabet letter.
 
 Better App icon, better splash screen icon.
 
+Spinner during service invocation.
+
+Fix navigation: remove back button when opening from home page.
+
+Refresh current games. 
+
+Fix logo in header.
+
+Filter on players page for surname.
+
+Rotate icon -> image.
+
+Install typings
+- npm install -g typings
+
+Install cordova.d.ts en networkinformstion.d.ts
+    typings install cordova --ambient --save
+    typings install cordova/plugins/networkinformation --ambient --save
+
+Check network connection at startup and give error message if unavailable. Problem: navigator.network not available!!!
+
+Retrieve and show KNLTB ranking and actual ranking.
+  - Setup proxy in ionic.config.json to prevent CORS error.
+  
 TODO:
-- Refresh current games.
-- Spinner during service invocation.
-- Fix logo in header.
-- Check database connection at startup and give error message if unavailable.
-- Style details pages (games, players, categories, events, about).
-- Fix navigation: remove back button when opening from home page.
+- Style detail pages (games, players, categories, events, about).
+- Show error message on timeout.
+
 
 Step 6
 ======
-Retrieve and show KNLTB ranking and actual ranking.
-
-Query speler by knltb and add to team in games.
-
-Filter on players page for surname
-
 Show all games for player in players details page.
 
-Show shemas with poules and players.
+Add favorites to persons and store on phone, local db.
+
+Show shemas with poules, players and game results.
+
 
 Step 7
 ======
-Add favorites to persons and store on phone.
+Restructure database.
 
-Favorite persons page (remove favorite).
-
-Show all games of favorite persons.
 
 Step 8
 ======

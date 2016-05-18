@@ -22,8 +22,10 @@
     "dateOfBirth": {"$date": "1965-08-16T22:00:00.00Z"},
     "gender":"M",
     "club": "Shaile",
-    "ranking":"7",
-    "rankingActual":"6,8",
+    "rankingSingleEndOfYear":"7",
+    "rankingSingleActual":"6,8",
+    "rankingDoubleEndOfYear":"7",
+    "rankingDoubleActual":"6,8",    
     "email":"robkuijpers@home.nl",
     "phone":"0612345678"
 }
@@ -36,8 +38,10 @@
     "dateOfBirth": {"$date": "2001-11-12T00:00:00.00Z"},
     "gender":"M",
     "club": "Shaile",    
-    "ranking":"7",
-    "rankingActual":"6,8",
+    "rankingSingleEndOfYear":"7",
+    "rankingSingleActual":"6,8",
+    "rankingDoubleEndOfYear":"7",
+    "rankingDoubleActual":"6,8",  
     "email":"pimkuijpers@home.nl",
     "phone":"0612345678"
 }
@@ -50,8 +54,10 @@
     "dateOfBirth": {"$date": "2004-04-23T00:00:00.00Z"},
     "gender":"M",
     "club": "Shaile",    
-    "ranking":"7",
-    "rankingActual":"6,8",
+    "rankingSingleEndOfYear":"7",
+    "rankingSingleActual":"6,8",
+    "rankingDoubleEndOfYear":"7",
+    "rankingDoubleActual":"6,8",  
     "email":"bramkuijpers@home.nl",
     "phone":"0612345678"
 }
@@ -64,8 +70,10 @@
     "dateOfBirth": {"$date": "1969-05-23T00:00:00.00Z"},
     "gender":"M",
     "club": "Carolus",    
-    "ranking":"7",
-    "rankingActual":"6,8",
+    "rankingSingleEndOfYear":"7",
+    "rankingSingleActual":"6,8",
+    "rankingDoubleEndOfYear":"7",
+    "rankingDoubleActual":"6,8",  
     "email":"none@home.nl",
     "phone":"0614445678"
 }
