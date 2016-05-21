@@ -3,6 +3,8 @@
   ion-card-header {
     font-size: 1.4rem;
     line-height: 1.4;
+    padding-left: 8px;
+    padding-right: 8px;
     
     .right {
       display: flex;
@@ -15,11 +17,24 @@
     }
   }
   
+  ion-card-content {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
   ion-item {
     display: block;
-    margin: 12px 0;    
-    border-bottom: 1px solid #E6E3E3;
-    padding-bottom: 12px;
+    margin: 0;    
+    border-bottom: 1px solid #f4f4f4;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+  }
+  
+  ion-item-divider {
+    font-weight: bold;
+    color: $text-color-secondary;
+    padding-left: 6px;
   }
   
   .player-icon {
@@ -35,9 +50,21 @@
     width: 16px;
   }
   
-  .knltb-data {
+  .knltb-nr {
     border-radius: 2px;
     padding: 0 2px;
     background-color: #E6E3E3;
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+  }
+  
+  .knltb-ranking {
+    border-radius: 2px;
+    padding: 0 2px;
+    background-color: #E6E3E3;
+    display: inline-block;
+    width: 45px;
+    text-align: center;
   }
 }

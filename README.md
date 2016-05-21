@@ -145,37 +145,58 @@ Install cordova.d.ts en networkinformstion.d.ts
     typings install cordova --ambient --save
     typings install cordova/plugins/networkinformation --ambient --save
 
-Check network connection at startup and give error message if unavailable. Problem: navigator.network not available!!!
+Check network connection at startup and give error message if unavailable. 
+In browser is navigator.network not available, it only works on a real device!!!
 
 Retrieve and show KNLTB ranking and actual ranking.
-  - Setup proxy in ionic.config.json to prevent CORS error.
+- Setup proxy in ionic.config.json to prevent CORS error.
   
+Styling of:
+- events
+- about
+- players
+- categories
+     
 TODO:
-- Style detail pages (games, players, categories, events, about).
+- Style games page (3 tabs)
 - Show error message on timeout.
+
+
+Side Step
+=========
+Watch Lynda.com cources:
+- TypeScript
+- XCode
+- IONIC (1)
+- AndroidStudio
+- NoSql databases
+- Angular2
+- NodeJS
+- Put ios apps in AppStore.
 
 
 Step 6
 ======
-Show all games for player in players details page.
+Player detail page with all his/her games.
+Pages with shemas -> poules (with players) -> games per poule.
 
 Add favorites to persons and store on phone, local db.
-
-Show shemas with poules, players and game results.
 
 
 Step 7
 ======
-Restructure database.
+NodeJs, Express, MongoDB, Mongoose, Angular2, Material design, JSON Web Tokens.
+Responsive.
+User roles:
+- Administrator
+- Super user
+- Enter scores
 
-
-Step 8
-======
-Webapp with login.
-Webapp with for CRUD:
+CRUD:
 - dates
 - categories
 - events
 - players
 - teams
+- poules
 - games

@@ -2,10 +2,13 @@ import {OnInit} from 'angular2/core';
 import {Page, Loading, NavController} from 'ionic-angular';
 import {EventsService} from '../../services/eventsService';
 import {Event} from '../../services/event';
+import {FormatDatePipe} from '../../pipes/formatDatePipe';
+import {FormatTimePipe} from '../../pipes/formatTimePipe';
 
 @Page({
   templateUrl: 'build/pages/events/events.html',
-    providers: [EventsService]
+    providers: [EventsService],
+    pipes: [FormatDatePipe, FormatTimePipe]
 })
 
 export class EventsPage {

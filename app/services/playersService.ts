@@ -9,11 +9,7 @@ import {Player} from './player';
 export class PlayersService { 
     
     private dbUrl: string = 'https://api.mlab.com/api/1/databases/toernooi/collections/';
-    private dbKey: string = '&apiKey=sx-HvoL-mQvXhyiMCuaiPsmrerSiveyX';
-
-    // get player with knltbNumber 
-    // https://api.mlab.com/api/1/databases/toernooi/collections/players?q={%22knltbNumber%22:%2212345633%22}&apiKey=sx-HvoL-mQvXhyiMCuaiPsmrerSiveyX
-     
+    private dbKey: string = '&apiKey=sx-HvoL-mQvXhyiMCuaiPsmrerSiveyX';     
     private TIMEOUT: number = 5000;
      
     constructor(private http: Http) {
@@ -106,8 +102,8 @@ export class PlayersService {
     
     getKnltbRating(knltbNumber: string) {
         
-        //let knltbUrl = "http://publiek.mijnknltb.nl/spelersprofiel.aspx?bondsnummer=" + knltbNumber;
-        let knltbUrl = "/api?bondsnummer=" + knltbNumber;
+        let knltbUrl = "http://publiek.mijnknltb.nl/spelersprofiel.aspx?bondsnummer=" + knltbNumber;
+        //let knltbUrl = "/api?bondsnummer=" + knltbNumber;
 
         let headers = new Headers();
         
@@ -133,10 +129,10 @@ export class PlayersService {
                   spelersProfielRow3 = spelersProfielTable.getElementsByTagName('tr')[2];
                 }
                 
-                let singleEndOfYear = '';
-                let doubleEndOfYear = '';
-                let singleActual = '';
-                let doubleActual = '';
+                let singleEndOfYear = null;
+                let doubleEndOfYear = null;
+                let singleActual = null;
+                let doubleActual = null;
 
                 if(spelersProfielRow1) {
                   singleEndOfYear = spelersProfielRow1.getElementsByTagName('td')[1].textContent;       

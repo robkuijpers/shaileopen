@@ -1,9 +1,10 @@
 export class Event {  
 
-    date: Date = null;
     name: string = "";      
     description: string = "";
-                      
+    startDate: Date = null;
+    endDate: Date = null;
+             
     constructor() {
 
     }

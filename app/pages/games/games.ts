@@ -3,16 +3,17 @@ import {Page, Loading, NavController} from 'ionic-angular';
 import {GamesService} from '../../services/gamesService';
 import {Game} from '../../services/game';
 import {Player} from '../../services/player';
-import {FormatDatePipe} from './formatDatePipe';
 import {FinishedGames} from './finishedGames';
 import {CurrentGames} from './currentGames';
 import {PlannedGames} from './plannedGames';
+import {FormatDatePipe} from '../../pipes/formatDatePipe';
+import {FormatTimePipe} from '../../pipes/formatTimePipe';
 
 @Page({
   templateUrl: 'build/pages/games/games.html',
   directives: [FinishedGames, CurrentGames, PlannedGames],
   providers: [GamesService],
-  pipes: [FormatDatePipe]
+  pipes: [FormatDatePipe, FormatTimePipe]
 })
 
 export class GamesPage {

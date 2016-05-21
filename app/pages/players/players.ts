@@ -2,13 +2,13 @@ import {OnInit, Output, EventEmitter} from 'angular2/core';
 import {Page, Loading, NavController} from 'ionic-angular';
 import {PlayersService} from '../../services/playersService';
 import {Player} from '../../services/player';
-import {AlphabetList} from './alphabetList';
+import {PlayersList} from './playersList';
 
 
 @Page({
   templateUrl: 'build/pages/players/players.html',
   providers: [PlayersService],
-  directives: [AlphabetList]
+  directives: [PlayersList]
 })
 
 export class PlayersPage {
@@ -51,10 +51,6 @@ export class PlayersPage {
                     },
                     (err) => {
                         console.log(err); 
-                    },
-                    () => {
-                       this.players = [];
-                       this.players = this.playersSave;
                     }
                 ); 
                   
@@ -64,6 +60,11 @@ export class PlayersPage {
           (err) => { 
               this.loading.dismiss(); 
               console.log(err); 
+          },
+          () => {
+              // Complete.
+              // Trigger a change on the list to display the ranking data.
+              this.players = this.playersSave;
           });
     
   }

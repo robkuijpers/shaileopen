@@ -1,7 +1,7 @@
 import {Component, Input, Output, EventEmitter} from 'angular2/core';
 import {Game} from '../../services/game';
 import {Player} from '../../services/player';
-import {FormatTimePipe} from './formatTimePipe';
+import {FormatTimePipe} from '../../pipes/formatTimePipe';
 
 @Component({
     selector: 'current-games',

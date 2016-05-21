@@ -21,16 +21,9 @@
     </ion-item>
   </ion-list>
   
-  <ion-card>
-    <ion-card-header>
-      Wedstrijden
-    </ion-card-header>
-    <ion-card-content (click)="refreshGames($event)">
-        <span>Verversen</span>
-        <img src="build/images/loop2.svg" style="width: 12px; display: inline-block;" [class.icon-spin]="rotate" />
-        <!--<i class="icon-loop2" [class.icon-spin]="rotate" (click)="refreshGames($event)"></i>-->
-    </ion-card-content>
-  </ion-card>
+  <div (click)="refreshGames($event)">
+      <img src="build/images/loop2.svg" style="width: 12px; display: inline-block;" [class.icon-spin]="rotate" />
+  </div>
     
   <ion-card>
     <ion-card-content>

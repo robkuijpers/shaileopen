@@ -25,8 +25,7 @@ export class HomePage {
   }
            
   toast: Toast = Toast.create({
-      message: 'You network status',
-      duration: 3000,
+      duration: 5000,
       showCloseButton: false,
       enableBackdropDismiss: true,
       dismissOnPageChange: true
@@ -59,7 +58,7 @@ export class HomePage {
         
         if(networkConnection) {
           let networkState = navigator.connection.type;
-          this.toast.setMessage("Your network connection: " + states[networkState]);
+          this.toast.setMessage("Network: " + states[networkState]);
           this.nav.present(this.toast);
         }
         

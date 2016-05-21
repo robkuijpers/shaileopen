@@ -51,7 +51,7 @@ class MyApp {
       { component: HomePage, class: 'icon-menu menu-icon', title: 'Home'},
       { component: GamesPage, class: 'icon-address-book menu-icon', title: 'Wedstrijden'},
       { component: PlayersPage, class: 'icon-users menu-icon', title: 'Spelers'},
-      { component: CategoriesPage, class: 'icon-tree menu-icon', title: 'Categorieen'},
+      { component: CategoriesPage, class: 'icon-tree menu-icon', title: 'Onderdelen'},
       { component: EventsPage, class: 'icon-glass2 menu-icon', title: 'Programma'},
       { component: AboutPage, class: 'icon-notification menu-icon', title: 'Over deze app'}
     ];

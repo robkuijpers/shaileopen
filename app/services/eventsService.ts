@@ -10,7 +10,7 @@ export class EventsService {
     private dbUrl: string = 'https://api.mlab.com/api/1/databases/toernooi/collections/';
     private dbKey: string = '&apiKey=sx-HvoL-mQvXhyiMCuaiPsmrerSiveyX';
 
-    private eventsByDate: string = 'events?s={%22date%22:1}';
+    private eventsByDate: string = 'events?s={%22startdate%22:1}';
 
     constructor(private http: Http) {
         this.http = http;
@@ -28,9 +28,14 @@ export class EventsService {
                 if(events.length > 0) {
                     events.forEach( (event) => {
                         let e: Event = new Event(); 
-                        e.date = new Date(event.date.$date);
                         e.name = event.name;
                         e.description = event.description;
+                        if(event.startdate) {
+                          e.startDate = new Date(event.startdate.$date);
+                        }  
+                        if(event.enddate) {
+                          e.endDate = new Date(event.enddate.$date);
+                        }  
                         result.push(e);
                     });
                 } 
