@@ -3,15 +3,14 @@ import {Page, Loading, NavController} from 'ionic-angular';
 import {GamesService} from '../../services/gamesService';
 import {Game} from '../../services/game';
 import {Player} from '../../services/player';
-import {FinishedGames} from './finishedGames';
-import {CurrentGames} from './currentGames';
-import {PlannedGames} from './plannedGames';
+import {GamePage} from './game2';
 import {FormatDatePipe} from '../../pipes/formatDatePipe';
 import {FormatTimePipe} from '../../pipes/formatTimePipe';
+import {Toast} from 'ionic-angular';
 
 @Page({
   templateUrl: 'build/pages/games/games.html',
-  directives: [FinishedGames, CurrentGames, PlannedGames],
+  directives: [GamePage],
   providers: [GamesService],
   pipes: [FormatDatePipe, FormatTimePipe]
 })
@@ -25,10 +24,19 @@ export class GamesPage {
   currentGames: Array<Game> = [];
   plannedGames: Array<Game> = [];
   
+//   finishedTab: GamePage = null;
+//   currentTab: GamePage = null;
+//   plannedTab: GamePage = null;
+      
   rotate = false;
               
   constructor(public nav: NavController, private gamesService: GamesService) {
       this.gamesService = gamesService;
+      
+    //   this.finishedTab = GamePage;
+    //   this.currentTab = GamePage;
+    //   this.plannedTab = GamePage;
+    
   }
 
   ngOnInit() {
@@ -47,7 +55,18 @@ export class GamesPage {
           }, 
           (err) => {
               loading.dismiss();
-              console.log(err)
+              console.log(err);
+              
+               // TODO: make this generic in a parent.
+               let message: Toast = Toast.create({
+                    message: "Fout tijdens ophalen gegevens.",
+                    duration: 5000,
+                    showCloseButton: false,
+                    enableBackdropDismiss: true,
+                    dismissOnPageChange: true
+                });
+                this.nav.present(message);
+                
           });
   }
     

@@ -28,7 +28,6 @@ export class GamesService {
                 let result: Array<Date> = [];
                 if(dates.length > 0) {
                    dates.forEach( (date) => {
-                      
                       var localDate = new Date(date.day.$date);                        
                       result.push(localDate);
                    })
@@ -125,5 +124,43 @@ export class GamesService {
                 return result;                  
             }); 
     }  
-     
+
+    getGamesForPlayerByDate(knltbNumber: string) {
+        
+        // where team1.players contains knltbNumber || team2.players contains knltbNumber    
+        let forPlayer: Object = {
+            knltbNumber: knltbNumber
+        };
+        
+        let byDate: Object = { date: 1 };
+            
+        let q = JSON.stringify(forPlayer);
+        let s = JSON.stringify(byDate);
+                
+        return this.http.get(this.dbUrl + "games?q=" + q + "&s=" +  s + this.dbKey)
+            .map( (res:Response) => { 
+                return res.json();             
+            })
+            .map( (games:any) => { 
+                let result: Array<Game> = [];
+                if(games.length > 0) {
+                    games.forEach( (game) => {
+                        let g: Game = new Game(); 
+                        g.date = new Date(game.date.$date);
+                        g.status = game.status;
+                        g.category = game.category;
+                        g.type = game.type;
+                        g.court = game.court;
+                        g.duration = game.duration;
+                        g.team1 = game.team1;
+                        g.team2 = game.team2
+                        g.result = game.result;
+                        result.push(g);
+                    });
+                } 
+            
+                return result;                  
+            }); 
+    } 
+         
 }

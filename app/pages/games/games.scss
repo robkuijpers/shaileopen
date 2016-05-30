@@ -5,12 +5,10 @@
         max-width: 65%;
         
         .select-text {
-            font-weight: bold;
+            font-weight: normal;
+            text-align: right;
+            height: 20px; 
         }
-    }
-
-    .select-text {
-        text-align: right;
     }
     
     .icon-button {
@@ -45,4 +43,67 @@
         }
     }
 
+    ion-card-title {
+        font-size: 1.6rem;
+        background-color: $header-background-color;
+        padding: 6px 6px 6px 6px;
+        border-radius: 4px;
+    }
+    
+    ion-card-content {
+        padding: 8px 8px 8px 8px;
+    }
+    
+    .game {
+        margin: 8px 0 16px 0;
+        
+        table {
+          width: 100%;
+        }
+    
+        td {
+          padding: 3px;
+          border: 2px solid white;
+          text-align: center;   
+          background-color: $table-background-color;
+          border-radius: 6px;
+        }
+        
+        td {
+            div.content {
+                padding: 1px; 
+                background-color: white; 
+                border-radius: 3px;
+            } 
+        }
+        
+        td.type {
+          width: 6%;
+        }
+       
+        td.names {
+           //width: 62%;
+           text-align: left; 
+           cursor: pointer;
+        }
+       
+        td.set {
+          width: 8%;
+          color: #A40233;
+          font-weight: bold;
+        } 
+        
+        td.winner {
+          width: 8%;
+        } 
+        
+        td.game-time {
+          text-align: left;
+        } 
+    }
+
+    .message {
+        color: $text-color-secondary;
+        margin: 8px 4px 8px 6px;
+    }
 }

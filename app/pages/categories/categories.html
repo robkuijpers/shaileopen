@@ -17,7 +17,7 @@
     </ion-card-header>
     <ion-card-content>
       <ion-list>
-        <ion-item *ngFor="#category of categories">
+        <ion-item *ngFor="#category of categories" (click)="showPoules(category)">
           <h2>{{ category.name }}</h2>
           <div class="category-details">
             <span>Schema's:</span>

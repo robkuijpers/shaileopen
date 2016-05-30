@@ -9,21 +9,23 @@
       </button>
     </ion-buttons> 
 </ion-navbar>
-             
+
+   <!--<ion-tabs>
+     <ion-tab tabTitle="Gespeeld" [root]="finishedTab"></ion-tab>
+     <ion-tab tabTitle="Nu Bezig" [root]="currentTab"></ion-tab>
+     <ion-tab tabTitle="Geplanned" [root]="plannedTab"></ion-tab>
+   </ion-tabs>-->
+               
 <ion-content class="games">
   
   <ion-list>
     <ion-item>
-      <ion-label>Datum</ion-label>
-      <ion-select  [(ngModel)]="selectedDate" (change)="dateSelected($event)">
-        <ion-option *ngFor="#dt of dates" [value]="dt">{{ dt | formatDate:dd-MMM-yyyy }}</ion-option>
+      <ion-label></ion-label>
+      <ion-select [(ngModel)]="selectedDate" (change)="dateSelected($event)">
+        <ion-option *ngFor="#dt of dates; #idx = index" [value]="dt">Dag {{ idx+1 }}: {{ dt | formatDate:dd-MMM-yyyy }}</ion-option>
       </ion-select>
     </ion-item>
   </ion-list>
-  
-  <div (click)="refreshGames($event)">
-      <img src="build/images/loop2.svg" style="width: 12px; display: inline-block;" [class.icon-spin]="rotate" />
-  </div>
     
   <ion-card>
     <ion-card-content>
@@ -32,10 +34,10 @@
       </ion-card-title>
       <ion-list>
         <ion-list-item *ngIf="finishedGames.length === 0">
-          Geen wedstrijden.
+          <div class="message">Geen wedstrijden.</div>
         </ion-list-item>  
         <ion-list-item class="game" *ngFor="#game of finishedGames">
-          <finished-games [game]=game></finished-games>
+          <game [game]=game></game>
       </ion-list-item>
       </ion-list>    
     </ion-card-content>
@@ -48,10 +50,10 @@
       </ion-card-title> 
       <ion-list>
         <ion-list-item *ngIf="currentGames.length === 0">
-          Geen wedstrijden.
+          <div class="message">Geen wedstrijden.</div>
         </ion-list-item> 
         <ion-list-item class="game" *ngFor="#game of currentGames">
-          <current-games [game]=game></current-games>
+          <game [game]=game></game>
         </ion-list-item>
       </ion-list> 
     </ion-card-content>  
@@ -64,16 +66,13 @@
       </ion-card-title>
       <ion-list>
         <ion-list-item *ngIf="plannedGames.length === 0">
-          Geen wedstrijden.
+          <div class="message">Geen wedstrijden.</div>
         </ion-list-item> 
         <ion-list-item class="game" *ngFor="#game of plannedGames">
-          <planned-games [game]=game></planned-games>
+          <game [game]=game></game>
         </ion-list-item>
       </ion-list> 
     </ion-card-content>  
   </ion-card>
-  
-   <!--<i class="icon-loop2 icon-spin"></i>
-   <img class="icon-spin" src="/build/images/icon.png"/>-->
 
 </ion-content>

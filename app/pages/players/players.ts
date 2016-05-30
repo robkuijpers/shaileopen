@@ -3,7 +3,7 @@ import {Page, Loading, NavController} from 'ionic-angular';
 import {PlayersService} from '../../services/playersService';
 import {Player} from '../../services/player';
 import {PlayersList} from './playersList';
-
+import {Toast} from 'ionic-angular';
 
 @Page({
   templateUrl: 'build/pages/players/players.html',
@@ -60,6 +60,17 @@ export class PlayersPage {
           (err) => { 
               this.loading.dismiss(); 
               console.log(err); 
+              
+               // TODO: make this generic in a parent.
+               let message: Toast = Toast.create({
+                    message: "Fout tijdens ophalen gegevens.",
+                    duration: 5000,
+                    showCloseButton: false,
+                    enableBackdropDismiss: true,
+                    dismissOnPageChange: true
+                });
+                this.nav.present(message);
+                 
           },
           () => {
               // Complete.

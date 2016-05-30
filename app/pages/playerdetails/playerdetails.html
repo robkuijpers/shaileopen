@@ -7,18 +7,21 @@
       <button class="toolbar-logo">       
         <a href="http://www.shaile.nl" target="_blank"></a>  
       </button>
-    </ion-buttons>    
+    </ion-buttons>   
 </ion-navbar>
-             
-<ion-content class="players">
-  <ion-searchbar [(ngModel)]="searchQuery" (input)="getFilteredPlayers($event)"></ion-searchbar>
+
+<ion-content class="playerdetails">
   <ion-card>
-    <ion-card-header>
-      <span class="left">Spelers</span>
-      <span *ngIf="players" class="right"><ion-badge>{{ players.length }}</ion-badge></span>
+    <ion-card-header >
+       {{ player.initials }} {{ player.prefix }} {{ player.surName }} ({{ player.knltbNumber }})
     </ion-card-header>
     <ion-card-content>
-      <players-list [list]="players"></players-list>
+      <ion-list>
+        <ion-item>
+            
+        </ion-item>
+      </ion-list>
     </ion-card-content>
   </ion-card>
 </ion-content>
+    

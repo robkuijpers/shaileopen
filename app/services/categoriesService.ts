@@ -3,6 +3,7 @@ import {Http, Headers, Response} from 'angular2/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import {Category} from './category';
+import {Poule} from './poule';
 
 @Injectable()
 export class CategoriesService { 
@@ -36,6 +37,17 @@ export class CategoriesService {
             
                 return result;                  
             }); 
-    }       
+    } 
+    
+    getPoulesForCategory(category: string) {
+        
+        let poules: Array<Poule> = [];
+        
+        poules.push( new Poule('A', 'HD7') );
+        poules.push( new Poule('B', 'HD7') );
+        poules.push( new Poule('C', 'HD7') );
+
+        return poules;
+    }      
     
 }

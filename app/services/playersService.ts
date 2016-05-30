@@ -102,8 +102,8 @@ export class PlayersService {
     
     getKnltbRating(knltbNumber: string) {
         
-        let knltbUrl = "http://publiek.mijnknltb.nl/spelersprofiel.aspx?bondsnummer=" + knltbNumber;
-        //let knltbUrl = "/api?bondsnummer=" + knltbNumber;
+        // let knltbUrl = "http://publiek.mijnknltb.nl/spelersprofiel.aspx?bondsnummer=" + knltbNumber;
+        let knltbUrl = "/api?bondsnummer=" + knltbNumber;
 
         let headers = new Headers();
         

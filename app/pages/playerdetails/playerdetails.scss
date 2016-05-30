@@ -1,8 +1,4 @@
-.categories {
-  
-   ion-item {
-        cursor: pointer;
-   }
+.playerdetails {
     
    ion-card-header {
         color: $primary-color-light;
@@ -19,14 +15,8 @@
        margin: 8px 0 4px 0;
    }
    
-   .category-details {
+   .playerdetails-details {
        font-size: 1.2rem;
    }
    
-   .data {
-       display: inline-block;
-       width: 50px;
-       color: $primary-color-light;
-       font-weight: bold;
-   }
 }

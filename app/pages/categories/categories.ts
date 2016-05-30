@@ -2,6 +2,7 @@ import {OnInit} from 'angular2/core';
 import {Page, Loading, NavController} from 'ionic-angular';
 import {CategoriesService} from '../../services/categoriesService';
 import {Category} from '../../services/category';
+import {PoulesPage} from '../poules/poules';
 
 @Page({
   templateUrl: 'build/pages/categories/categories.html',
@@ -12,8 +13,9 @@ export class CategoriesPage {
    
   categories: Array<Category>;
     
-  constructor(public nav: NavController, private categoriesService: CategoriesService) {
+  constructor(private nav: NavController, private categoriesService: CategoriesService) {
       this.categoriesService = categoriesService;
+      this.nav = nav;
   }
   
   ngOnInit() {
@@ -33,6 +35,11 @@ export class CategoriesPage {
               loading.dismiss(); 
               console.log(err)
           });
+  }
+  
+  showPoules(category: Category) {
+      console.log('poules page:' + category);
+      this.nav.push(PoulesPage, { category: category });
   }
     
 }

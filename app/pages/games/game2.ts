@@ -4,12 +4,12 @@ import {Player} from '../../services/player';
 import {FormatTimePipe} from '../../pipes/formatTimePipe';
 
 @Component({
-    selector: 'finished-games',
-    templateUrl: 'build/pages/games/finishedGames.html',
+    selector: 'game',
+    templateUrl: 'build/pages/games/game.html',
     pipes: [FormatTimePipe]    
 })
 
-export class FinishedGames {
+export class GamePage {
         
     @Input() game: Game;
     @Output() showPlayer: EventEmitter<Player> = new EventEmitter();

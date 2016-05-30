@@ -1,0 +1,50 @@
+<div class="game">
+    <table>
+        <tr>
+            <td>
+                <div class="content">
+                   {{ game.category }}
+                </div>
+            </td>
+            <td class="game-time" colspan="5">
+                <div class="content">
+                   {{ game.date | formatTime:hh:mm }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="type" [ngClass]="game.type"></td>
+            <td class="names">
+                <span *ngIf="game.team1.players.length > 0" (click)='playerClicked(game.team1.players[0])'>
+                    {{ game.team1.players[0].knltbNumber}}
+                </span>
+                <span *ngIf="game.team1.players.length > 1" (click)='playerClicked(game.team1.players[1])'>
+                    / {{ game.team1.players[1].knltbNumber}}
+                </span>
+            </td>
+            <td class="set" *ngFor="#set of game.team1.sets">
+                  {{ set }} 
+            </td>     
+            <td class="winner">
+               <div class="icon-trophy" *ngIf="game.result === 'team1'"></div> 
+            </td>
+        </tr>
+        <tr>
+            <td [ngClass]="game.type"></td>
+            <td class="names">
+                <span *ngIf="game.team2.players.length > 0" (click)='playerClicked(game.team2.players[0])'>
+                    {{ game.team2.players[0].knltbNumber}}
+                </span>
+                <span *ngIf="game.team2.players.length > 1" (click)='playerClicked(game.team2.players[1])'>
+                    / {{ game.team2.players[1].knltbNumber}}
+                </span>
+            </td>
+            <td class="set" *ngFor="#set of game.team2.sets">
+                  {{ set }} 
+            </td>     
+            <td class="winner">
+                <div class="icon-trophy" *ngIf="game.result === 'team2'"></div>
+            </td>
+        </tr>
+    </table>   
+</div>

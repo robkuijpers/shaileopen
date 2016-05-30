@@ -1,12 +1,14 @@
 import {Component, Input, OnChanges, SimpleChange} from 'angular2/core';
+import {Page, Loading, NavController} from 'ionic-angular';
 import {Player} from '../../services/player';
+import {PlayerDetailsPage} from '../playerdetails/playerdetails';
 
 @Component({
     selector: 'players-list',
     template: `<ion-item-group class="alphabetList">
                  <div *ngFor="#player of players; #idx=index;">
                     <ion-item-divider light *ngIf="insertDivider(idx)">{{ currentLetter }}</ion-item-divider>
-                    <ion-item>
+                    <ion-item (click)="showPlayerDetails(player)">
                         <span class="icon-user player-icon"></span>
                         <span>{{ player.initials }}</span>
                         <span>{{ player.prefix }}</span> 
@@ -33,7 +35,8 @@ export class PlayersList {
        this.players = players;
     }
         
-    constructor() {
+    constructor(private nav: NavController) {
+        this.nav = nav;
         
     }
     
@@ -52,6 +55,11 @@ export class PlayersList {
     // Return the first lowercase letter for the given string.    
     firstLetter(str: string) {
         return "" || str.charAt(0).toUpperCase();
+    }
+ 
+    showPlayerDetails(player) {
+        console.log('showPlayerDetails:' + player);
+        this.nav.push(PlayerDetailsPage, { player: player } );
     }
  
 }

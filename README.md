@@ -156,13 +156,18 @@ Styling of:
 - about
 - players
 - categories
+- games page
      
+Fixed Spelers header.
+Page with poules per schema (with players and results) (wait for datamodel update)
+Player detail page with all his/her games (wait for datamodel update).
+Show toast message on timeout.
+
 TODO:
-- Style games page (3 tabs)
-- Show error message on timeout.
+- Games page with 3 tabs.
 
 
-Side Step
+Step 5.1
 =========
 Watch Lynda.com cources:
 - TypeScript
@@ -175,22 +180,16 @@ Watch Lynda.com cources:
 - Put ios apps in AppStore.
 
 
-Step 6
-======
-Player detail page with all his/her games.
-Pages with shemas -> poules (with players) -> games per poule.
-
-Add favorites to persons and store on phone, local db.
-
-
 Step 7
 ======
-NodeJs, Express, MongoDB, Mongoose, Angular2, Material design, JSON Web Tokens.
+Build admin webapp with use of: 
+Docker, NodeJs, Express, MongoDB, Mongoose, Angular2, Material Design, JSON Web Tokens.
 Responsive.
+
 User roles:
-- Administrator
-- Super user
-- Enter scores
+- Administrator (Enter users)
+- Super user (Enter dates, categories, players, teams, games, scores)
+- User (Enter scores)
 
 CRUD:
 - dates
@@ -200,3 +199,16 @@ CRUD:
 - teams
 - poules
 - games
+- kwartfinale / halve finale / finale
+
+Step 6
+======
+Add favorites to persons and store on phone, local db.
+Berekenen winnaar, walkover, opgave, niet gespeeld.
+
+
+Setp 8
+======
+Refresh dmv websockets.
+Refactor css.
+Refactor ts.

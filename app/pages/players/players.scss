@@ -1,15 +1,19 @@
 .players {
   
   ion-card-header {
-    font-size: 1.4rem;
-    line-height: 1.4;
-    padding-left: 8px;
-    padding-right: 8px;
-    
-    .right {
-      display: flex;
-      flex-direction: row;
+    display: flex;
+    color: $primary-color-light;
+    background-color: $header-background-color;
+    border-bottom: 1px solid $header-border-color;
+
+    .left {
       justify-content: flex-end;
+      flex: 9 0 0;
+    }
+        
+    .right {
+      justify-content: flex-end;
+      flex: 1 0 0;
     }
     
     span {
@@ -29,6 +33,7 @@
     padding-top: 6px;
     padding-bottom: 6px;
     padding-left: 6px;
+    cursor: pointer;
   }
   
   ion-item-divider {
